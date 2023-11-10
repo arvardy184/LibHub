@@ -2,51 +2,436 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/style.css"/>
-    <title>Project Tailwind dengan NPM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/output.css"/>
+    <title>Belajar Tailwind</title>
 </head>
 
-<body class="bg-green-300">
-
-    <!-- Outer Container Fullscreen -->
-    <div class="flex flex-col items-center justify-center w-full h-screen p-4">
-        <h1 class="text-3xl lg:text-5xl p-4 font-semibold">Belajar bersama PornHub</h1>
-        <!-- White Container -->
-        <div class="bg-white rounded-lg shadow-lg flex flex-row p-6 max-w-4xl w-full">
-            
-            <nav class="flex justify-center mb-4">
-                <!-- Navigation links... -->
-            </nav>
-          
-            <h1 class="text-3xl lg:text-5xl font-semibold items-center text-yellow-950 flex flex-row text-center">LibHub</h1>
-            <p class="m-4 hover:bg-green-100 text-center justify-center text-sm lg:text-base">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima in eum fugit tempora animi ad voluptatibus modi repudiandae blanditiis magni a reprehenderit sed eveniet laboriosam, adipisci alias fugiat vel cupiditate.
-            </p>
-            
-            <!-- Center button using flexbox utilities -->
-            <div class="flex justify-center items-center">
-                <a href="#" class="bg-green-500 px-5 py-2 text-white inline-block m-3 rounded shadow hover:bg-green-700">COBA</a>
+    <body class="font-Jakarta  h-fit bg-slate-500 ">
+        <header class="bg-white">
+          <div class="navbar bg-base-100">
+            <div class="flex-1">
+              <a class="btn btn-ghost normal-case text-xl">LibHub</a>
             </div>
 
-        </div>
+            <div class="flex-row gap-1">
+              <div class="form-control flex-auto items-center justify-center ">
+                <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto  flex items-center justify-center"/>
+              
+              </div>
+              
+              <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                  <div class="w-10 rounded-full">
+                    <img src="../public/assets/diva.jpg" />
+                  </div>
+                </label>
+                <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                  <li>
+                    <a class="justify-between">
+                      Profile
+                    </a>
+                  </li>
+                  <li><a>Settings</a></li>
+                  <li><a>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+
+          
+          </div>
+        </header>
+
+
+<div class="flex items-center justify-center ">
+        <h1 class="text-2xl font-semibold p-6 text-slate-900 ">Temukan Buku Menarik di LibHub</h1>
+
+    </div>
+    <div class="flex items-center justify-center">
+      <!-- Basic Text Button -->
+<button class="text-slate-700 hover:text-blue-700 focus:outline-none">Gabung Sekarang</button>
+
     </div>
 
-    <div class="max-w-sm mx-auto bg-white rounded-lg overflow-hidden shadow-lg">
-        <img class="w-full" src="../public/assets/diva.jpg" alt="Gambar">
-        <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2 text-center">My Sweetie Fox</div>
-            <p class="text-gray-700 text-base text-center">
-                Divaku cintaku sangat indah untukku dan kamu sudah aku santet sejak kecil kamu tidak bisa pergi dariku seperti cintaku kepada marji
-            </p>
-        </div>
-        <div class="px-6 pt-4 pb-2 flex justify-center">
-            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded items-center justify-center  ">
-                Tekan Aku
-            </button>
-        </div>
+
+    <div class="relative flex items-center ">
+    <!-- Container untuk buku-buku dengan scrollable horizontal -->
+
+     <!-- Panah kiri -->
+  <button onclick="scrollLeft()" class="absolute left-0 z-10 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-r">
+    &#8592;
+  </button>
+
+<div id="bookScroll" class="flex overflow-x-auto py-4 space-x-4">
+    <!-- Card untuk buku individual -->
+    <div class="flex-none w-60">
+      <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 1" class="w-full h-auto object-cover rounded-lg shadow-md">
+      <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+        <h3 class="text-lg font-semibold">Judul Buku 1</h3>
+        <p class="text-gray-600">Penulis: Nama Penulis</p>
+        <p class="text-gray-600">Tahun Terbit: 2023</p>
+        <!-- Informasi lainnya -->
+      </div>
     </div>
 
+    <div class="flex-none w-60">
+
+        <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 1" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold">Judul Buku 1</h3>
+          <p class="text-gray-600">Penulis: Nama Penulis</p>
+          <p class="text-gray-600">Tahun Terbit: 2023</p>
+          <!-- Informasi lainnya -->
+        </div>
+      </div>
+
+      <div class="flex-none w-60">
+
+        <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 1" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold">Judul Buku 1</h3>
+          <p class="text-gray-600">Penulis: Nama Penulis</p>
+          <p class="text-gray-600">Tahun Terbit: 2023</p>
+          <!-- Informasi lainnya -->
+        </div>
+      </div>
+
+      <div class="flex-none w-60">
+
+        <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 1" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold">Judul Buku 1</h3>
+          <p class="text-gray-600">Penulis: Nama Penulis</p>
+          <p class="text-gray-600">Tahun Terbit: 2023</p>
+          <!-- Informasi lainnya -->
+        </div>
+      </div>
+
+      <div class="flex-none w-60">
+
+        <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 1" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold">Judul Buku 1</h3>
+          <p class="text-gray-600">Penulis: Nama Penulis</p>
+          <p class="text-gray-600">Tahun Terbit: 2023</p>
+          <!-- Informasi lainnya -->
+        </div>
+      </div>
+
+      <div class="flex-none w-60">
+        <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 1" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold">Judul Buku 1</h3>
+          <p class="text-gray-600">Penulis: Nama Penulis</p>
+          <p class="text-gray-600">Tahun Terbit: 2023</p>
+          <!-- Informasi lainnya -->
+        </div>
+      </div>
+
+      <div class="flex-none w-60">
+        <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 1" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold">Judul Buku 1</h3>
+          <p class="text-gray-600">Penulis: Nama Penulis</p>
+          <p class="text-gray-600">Tahun Terbit: 2023</p>
+          <!-- Informasi lainnya -->
+        </div>
+      </div>
+
+      <div class="flex-none w-60">
+        <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 1" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold">Judul Buku 1</h3>
+          <p class="text-gray-600">Penulis: Nama Penulis</p>
+          <p class="text-gray-600">Tahun Terbit: 2023</p>
+          <!-- Informasi lainnya -->
+        </div>
+      </div>
+
+      <div class="flex-none w-60">
+        <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 1" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold">Judul Buku 1</h3>
+          <p class="text-gray-600">Penulis: Nama Penulis</p>
+          <p class="text-gray-600">Tahun Terbit: 2023</p>
+          <!-- Informasi lainnya -->
+        </div>
+      </div>
+  
+    <!-- Copy dan sesuaikan blok di atas untuk setiap buku lainnya -->
+    <div class="flex-none w-60">
+      <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 2" class="w-full h-auto object-cover rounded-lg shadow-md">
+      <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+        <h3 class="text-lg font-semibold justify-center items-center flex">Perahu Kertas</h3>
+        <p class="text-gray-600">Penulis: Tere Liye</p>
+        <p class="text-gray-600">Tahun Terbit: 2022</p>
+        <!-- Informasi lainnya -->
+      </div>
+    </div>
+  
+    <!-- Tambahkan lebih banyak buku jika perlu -->
+  </div>
+
+  
+  
+ <!-- Panah kanan -->
+  <button onclick="scrollRight()" class="absolute right-0 z-10 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-l">
+    &#8594;
+  </button>
+</div>
+
+<div class="relative flex items-center p-2 m-4 space-x-4 scroll-px-60 bg-stone-800 rounded-lg">
+    <!-- Container untuk buku-buku dengan scrollable horizontal -->
+
+     <!-- Panah kiri -->
+  <button onclick="scrollLeft()" class="absolute left-0 z-10 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-r">
+    &#8592;
+  </button>
+
+<div id="bookScroll" class="flex overflow-x-auto py-4 space-x-4">
+    <!-- Card untuk buku individual -->
+    <!-- Copy dan sesuaikan blok di atas untuk setiap buku lainnya -->
+    <div class="flex-none w-60">
+        <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 2" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold justify-center items-center flex">Perahu Kertas</h3>
+          <p class="text-gray-600">Penulis: Tere Liye</p>
+          <p class="text-gray-600">Tahun Terbit: 2022</p>
+          <!-- Informasi lainnya -->
+        </div>
+      </div>
+
+     <!-- Copy dan sesuaikan blok di atas untuk setiap buku lainnya -->
+     <div class="flex-none w-60">
+        <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 2" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold justify-center items-center flex">Perahu Kertas</h3>
+          <p class="text-gray-600">Penulis: Tere Liye</p>
+          <p class="text-gray-600">Tahun Terbit: 2022</p>
+          <!-- Informasi lainnya -->
+        </div>
+      </div>
+
+       <!-- Copy dan sesuaikan blok di atas untuk setiap buku lainnya -->
+    <div class="flex-none w-60">
+        <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 2" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold justify-center items-center flex">Perahu Kertas</h3>
+          <p class="text-gray-600">Penulis: Tere Liye</p>
+          <p class="text-gray-600">Tahun Terbit: 2022</p>
+          <!-- Informasi lainnya -->
+        </div>
+      </div>
+
+       <!-- Copy dan sesuaikan blok di atas untuk setiap buku lainnya -->
+    <div class="flex-none w-60">
+        <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 2" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold justify-center items-center flex">Perahu Kertas</h3>
+          <p class="text-gray-600">Penulis: Tere Liye</p>
+          <p class="text-gray-600">Tahun Terbit: 2022</p>
+          <!-- Informasi lainnya -->
+        </div>
+      </div>
+
+       <!-- Copy dan sesuaikan blok di atas untuk setiap buku lainnya -->
+    <!-- Copy dan sesuaikan blok di atas untuk setiap buku lainnya -->
+    <div class="flex-none w-60">
+        <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 2" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold justify-center items-center flex">Perahu Kertas</h3>
+          <p class="text-gray-600">Penulis: Tere Liye</p>
+          <p class="text-gray-600">Tahun Terbit: 2022</p>
+          <!-- Informasi lainnya -->
+        </div>
+      </div>
+
+    <!-- Copy dan sesuaikan blok di atas untuk setiap buku lainnya -->
+    <div class="flex-none w-60">
+        <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 2" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold justify-center items-center flex">Perahu Kertas</h3>
+          <p class="text-gray-600">Penulis: Tere Liye</p>
+          <p class="text-gray-600">Tahun Terbit: 2022</p>
+          <!-- Informasi lainnya -->
+        </div>
+      </div>
+
+      <!-- Copy dan sesuaikan blok di atas untuk setiap buku lainnya -->
+      <div class="flex-none w-60">
+        <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 2" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold justify-center items-center flex">Perahu Kertas</h3>
+          <p class="text-gray-600">Penulis: Tere Liye</p>
+          <p class="text-gray-600">Tahun Terbit: 2022</p>
+          <!-- Informasi lainnya -->
+        </div>
+      </div>
+
+       <!-- Copy dan sesuaikan blok di atas untuk setiap buku lainnya -->
+    <div class="flex-none w-60">
+        <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 2" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold justify-center items-center flex">Perahu Kertas</h3>
+          <p class="text-gray-600">Penulis: Tere Liye</p>
+          <p class="text-gray-600">Tahun Terbit: 2022</p>
+          <!-- Informasi lainnya -->
+        </div>
+      </div>
+
+      <!-- Copy dan sesuaikan blok di atas untuk setiap buku lainnya -->
+      <div class="flex-none w-60">
+        <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 2" class="w-full h-auto object-cover rounded-lg shadow-md">
+        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-lg font-semibold justify-center items-center flex">Perahu Kertas</h3>
+          <p class="text-gray-600">Penulis: Tere Liye</p>
+          <p class="text-gray-600">Tahun Terbit: 2022</p>
+          <!-- Informasi lainnya -->
+        </div>
+      </div>
+  
+    <!-- Copy dan sesuaikan blok di atas untuk setiap buku lainnya -->
+    <div class="flex-none w-60">
+      <img src="../public/assets/icon/cover.jpg" alt="Judul Buku 2" class="w-full h-auto object-cover rounded-lg shadow-md">
+      <div class="mt-2 bg-white p-4 rounded-lg shadow-lg">
+        <h3 class="text-lg font-semibold justify-center items-center flex">Perahu Kertas</h3>
+        <p class="text-gray-600">Penulis: Tere Liye</p>
+        <p class="text-gray-600">Tahun Terbit: 2022</p>
+        <!-- Informasi lainnya -->
+      </div>
+    </div>
+  
+    <!-- Tambahkan lebih banyak buku jika perlu -->
+  </div>
+
+  
+  
+ <!-- Panah kanan -->
+  <button onclick="scrollRight()" class="absolute right-0 z-10 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-l">
+    &#8594;
+  </button>
+</div>
+
+    </body>
+
+   <!-- Footer -->
+   <footer class="bg-gray-800 text-white text-center py-6">
+    <div class="container mx-auto px-6">
+      <div class="flex justify-center mb-6">
+        <!-- Social Media Links -->
+        <a href="https://facebook.com" class="mx-2">
+          <!-- You can include icons from a library like FontAwesome here -->
+          Facebook
+        </a>
+        <a href="https://twitter.com" class="mx-2">
+          Twitter
+        </a>
+        <a href="https://instagram.com" class="mx-2">
+          Instagram
+        </a>
+        <!-- Add more social media links as needed -->
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="flex justify-center mb-4">
+        <a href="/about" class="mx-2">About Us</a>
+        <a href="/contact" class="mx-2">Contact</a>
+        <a href="/terms" class="mx-2">Terms of Service</a>
+        <!-- Add more navigation links as needed -->
+      </div>
+
+      <!-- Contact Information -->
+      <div class="text-center mb-4">
+        <span class="block">Email: libhub@library.com</span>
+        <span class="block">Phone: (123) 8585-2928</span>
+      </div>
+
+      <div class="text-center">
+        <p>&copy; 2023 Perpustakaan Kami. Hak Cipta Dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+    
+        <script>
+
+function scrollLeft() {
+  const scrollContainer = document.getElementById('bookScroll');
+  // Scroll ke kiri sejauh 300px, atau sesuaikan dengan ukuran buku Anda
+  scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+}
+
+function scrollRight() {
+  const scrollContainer = document.getElementById('bookScroll');
+  // Scroll ke kanan sejauh 300px, atau sesuaikan dengan ukuran buku Anda
+  scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+}
+
+          // Set the target element that will be collapsed or expanded (dropdown menu)
+          const $targetEl = document.getElementById('dropdownMenu');
+        
+          // Optionally set a trigger element (button, icon, etc.)
+          const $triggerEl = document.getElementById('triggerEl'); // Make sure you have a trigger element with this id
+        
+          // Optional options with default values and callback functions
+          const options = {
+            onCollapse: () => {
+              console.log('Element has been collapsed');
+            },
+            onExpand: () => {
+              console.log('Element has been expanded');
+            },
+            onToggle: () => {
+              console.log('Element has been toggled');
+            },
+          };
+        
+          // Function to toggle the target element
+          function toggleElement() {
+            if ($targetEl) {
+              $targetEl.classList.toggle('hidden'); // Toggle the "hidden" class to show/hide the element
+              options.onToggle(); // Call the onToggle callback function
+            }
+          }
+        
+          // Add a click event listener to the trigger element
+          if ($triggerEl) {
+            $triggerEl.addEventListener('click', toggleElement);
+          }
+
+          const scrollContainer = document.getElementById('bookScroll');
+  
+          scrollContainer.addEventListener('scroll', () => {
+  const scrollX = scrollContainer.scrollLeft + (scrollContainer.offsetWidth / 2);
+  const books = scrollContainer.querySelectorAll('.flex-none');
+  
+  // Menghapus class 'scale-105' dari semua buku
+  books.forEach(book => {
+    book.classList.remove('scale-105');
+  });
+
+  // Array untuk menyimpan perbedaan jarak tiap buku dari tengah
+  const distances = [];
+
+  // Menghitung jarak tiap buku dari tengah
+  books.forEach((book, index) => {
+    const bookLeft = book.offsetLeft;
+    const bookRight = bookLeft + book.offsetWidth;
+    const bookCenter = (bookLeft + bookRight) / 2;
+    const distance = Math.abs(scrollX - bookCenter); // Jarak absolut dari tengah
+    distances[index] = distance;
+  });
+
+  // Mencari index buku dengan jarak terkecil dari tengah
+  const centerBookIndex = distances.indexOf(Math.min(...distances));
+
+  // Menambahkan class 'scale-105' pada buku yang di tengah
+  if (books[centerBookIndex] !== undefined) {
+    books[centerBookIndex].classList.add('scale-105');
+  }
+});
+
+        </script>
 </body>
 </html>
