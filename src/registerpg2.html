@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <style>
+    .kiri{
+      animation : kekiri 1s ease-in
+    }
+    .kanan{
+      animation : kekanan 1s ease-in
+    }
+    .kokjauh{
+      animation: ilangatas 1s ease-out
+    }
+    .animated-element {
+    top: 0;
+    animation: moveDown 1s ease-in; /* Menyertakan animasi 'moveDown' dengan durasi 2 detik dan efek 'ease', diulang secara tak terbatas */
+  }
+    @keyframes ilangatas{
+      0%{
+        transform: translateY(0);
+        opacity: 100;
+      }
+      100%{
+        transform: translateY(100%);
+        opacity: 0;
+      }
+    }
+    @keyframes moveDown {
+      0% {
+        transform: translateY(-100%);
+        opacity:0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 100;
+      }
+    }
+    @keyframes kekiri {
+      0%{
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100%{
+        transform: translateX(0);
+        opacity: 100;
+      }
+    }
+    @keyframes kekanan{
+      0%{
+        transform: translateX(0);
+        opacity: 100;
+      }
+      100%{
+        transform: translateX(100%);
+        opacity: 0;
+      }
+    }
+    .left22{
+        margin-left: 85px;
+    }
+    .active{
+        background-color: green;
+    }
+    .opacitykan{
+        animation : animasicome 0.2s ease-in 
+    }
+    .menghilang{
+        animation : animasiout 0.2s ease-out 
+    }
+    .munculalus{
+        animation : animasicome 0.5s ease-in 
+    }
+    .ilangalus{
+        animation : animasiout 0.5s ease-out 
+    }
+    .kebawah{
+        animation : down  0.2s linear
+    }
+    @keyframes down{
+        0%{
+            transform: translateY(-100%);
+        }
+        100%{
+            transform: translateY(0%);
+        }
+    }
+    @keyframes animasicome{
+        0%{
+            opacity: 0%;
+        }
+        100%{
+            opacity: 100%;
+        }
+    }
+    @keyframes animasiout{
+        0%{
+            opacity: 100%;
+        }
+        100%{
+            opacity: 0%;
+        }
+    }
+  </style>
+  <body class="bg-cover bg-center bg-fixed overflow-auto flex" style="background-image: url(/LibHub/public/assets/perpus.jpg)">
+    <header class="bg-white" > 
+    </header>
+    <div class="overflow-auto flex bg-cover bg-white bg-opacity-50 h-full w-full ml-0 mr-0 mb-0 mt-0 bg-fixed fixed">
+      <div class="container mx-auto p-2 my-auto">
+        <div class="bg-gray-400 outline-purple-800 p-10 max-w-md mx-auto rounded-3xl bg-opacity-80">
+          <h1 class="text-2xl font-semibold mb-4">Register</h1>
+          <form id="register-form">
+            <div class="mb-4">
+              <label for="name" class="block text-sm font-medium text-gray-950">Nama Lengkap</label>
+              <input type="text" id="name" name="name" class="mt-1 p-2 w-full border rounded-md" required>
+            </div>
+            <div class="mb-4">
+              <label for="tl" class="block text-sm font-medium text-gray-950">Tanggal Lahir</label>
+              <input type="date" id="tl" name="tl" class="mt-1 p-2 w-full border rounded-md" required>
+            </div>
+            <div class="mb-4">
+              <label for="nik" class="block text-sm font-medium  text-gray-950">NIK</label>
+              <input type="text" id="nik" name="nik" class="mt-1 p-2 w-full border rounded-md" required>
+            </div>
+            <div class="mb-4">
+                <label for="nohp" class="block text-sm font-medium  text-gray-950">Nomor Hp</label>
+                <input type="text" id="nohp" name="nohp" class="mt-1 p-2 w-full border rounded-md" required>
+              </div>
+            <button id ="mengsukses"  type="submit" class=" w-full bg-blue-500 text-white p-2 rounded-md hover:bg-yellow-700 transition">Register</button>    
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="berhasil" class="overflow-auto flex modal blur-sm p-2 h-screen w-screen fixed left-0 top-0 ml-0 mr-0 mb-0 mt-0 bg-fixed bg-black bg-opacity-50 hidden">
+      <div id="gerakmang" class=" bg-white w-1/2 rounded-3xl shadow-lg my-auto mx-auto max-w-xs selection:fixed kokjauh">
+        <div class="border-b-2 spacing-1 px-4 py-2">
+          <h3 class="text-black text-center">Yes, Berhasil Daftar Lho!</h3>
+        </div>
+        <div class="text-center p-4">
+          <p>Silahkan cek alamat email mu untuk verifikasi</p>
+        </div>
+        <div class="p-4 flex">
+          <button id="ok" type="click" class=" items-center w-full mx-auto my-auto bg-blue-500 text-white p-2 rounded-3xl hover:bg-green-700 transition">Ok Bang</button>
+        </div>
+    </div>
+  </body> 
+  <script src="/LibHub/src/scripregis2.js">
+    
+  </script>
+</html>
