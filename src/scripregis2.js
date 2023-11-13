@@ -24,10 +24,20 @@ var a = document.getElementById("gerakmang")
         alert("NIK / Nomor Hp harus angka saja ya!")
       }
     else{
-        animasikan();
-        berhasil.classList.remove('hidden')
-    }
+        if(nik.value.toString().length!=16){
+          alert("NIK harus 16 digit")
+        }
+        else if(nohp.value.toString().length<10){
+          alert("Nomor hp minimal 10 digit")
+        }
+        else{
+          animasikan();
+          berhasil.classList.remove('hidden')
+
+        }
         
+    }
+    
      
         
         
@@ -36,8 +46,21 @@ var a = document.getElementById("gerakmang")
     ok.addEventListener('click',function(){
       ilangdonk();
     });
-   
-
+    history.replaceState(null, null, window.location.href);
+    history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+      
+      history.go(1);
+    };   
+    document.addEventListener("DOMContentLoaded", function() {
+      var tokenFromURL = getParameterByName('token'); // Fungsi untuk mendapatkan parameter dari URL
+      var storedToken = sessionStorage.getItem('pageBToken');
+  
+      if (tokenFromURL !== storedToken) {
+          // Token tidak sesuai, arahkan ke halaman lain
+          window.location.href = "halamanC.html";
+      }
+  });
     function animasikan(){
       if(a.classList.contains('kokjauh')){
         a.removeEventListener('animationend',dump)
@@ -47,7 +70,9 @@ var a = document.getElementById("gerakmang")
       
     }
     function setelahIlangdonkSelesai() {
-    berhasil.classList.add('hidden');
+      berhasil.classList.add('hidden');
+      window.location.reload(true);
+      window.location.href='login.html';
     }
     function ilangdonk(){
       a.classList.remove('animated-element');

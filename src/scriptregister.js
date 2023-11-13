@@ -10,10 +10,10 @@ function backdulu(){
     },500);   
 }
 function muter(){
-  const pepek = document.getElementById('pepek')
-  pepek.classList.add('animate-spin')
+  const memutar = document.getElementById('memutar')
+  memutar.classList.add('animate-spin')
   setTimeout(function() {
-      pepek.classList.remove('animate-spin')
+      memutar.classList.remove('animate-spin')
   },500);
 }
 var message = document.getElementById('message');
@@ -130,7 +130,7 @@ var a = document.getElementById("gerakmang")
       a.style.display = 'block';
       setelahIlangdonkSelesai();
     }
-    const refresh = document.getElementById('pepek')
+    const refresh = document.getElementById('memutar')
 refresh.addEventListener('click',function(){
     setTimeout(function() {
         refreshCaptcha();

@@ -24,16 +24,16 @@ function active(){
 var message = document.getElementById('message');
 message.style.display="none"
 function muter(){
-    const pepek = document.getElementById('pepek')
-    pepek.classList.add('animate-spin')
+    const memutar = document.getElementById('memutar')
+    memutar.classList.add('animate-spin')
     setTimeout(function() {
-        pepek.classList.remove('animate-spin')
+        memutar.classList.remove('animate-spin')
     },500);
 }
 const putar = document.getElementById('putar')
 const captchakun = document.getElementById('captchakun')
 var captchaElementInput = document.getElementById('captchainput')
-const refresh = document.getElementById('pepek')
+const refresh = document.getElementById('memutar')
 refresh.addEventListener('click',function(){
     setTimeout(function() {
         refreshCaptcha();
@@ -124,6 +124,9 @@ form.addEventListener('submit', function (e) {
     });
     if(uwah.classList.contains("bg-red-500")){
         alert("ISI CAPTCHA NYA MASBRO!!")
+    }
+    else{
+        
     }
 });
 function klikds(){

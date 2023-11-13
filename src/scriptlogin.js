@@ -1,4 +1,5 @@
 const nig = document.getElementById('nig')
+history.pushState(null, null, window.location.href);
 function backdulu(){
     
     nig.classList.remove('munculalus')
@@ -17,10 +18,10 @@ const captchakun = document.getElementById('captchakun')
 var captchaElementInput = document.getElementById('captchainput')
 
 function muter(){
-    const pepek = document.getElementById('pepek')
-    pepek.classList.add('animate-spin')
+    const memutar = document.getElementById('memutar')
+    memutar.classList.add('animate-spin')
     setTimeout(function() {
-        pepek.classList.remove('animate-spin')
+        memutar.classList.remove('animate-spin')
     },500);
 }
 var message = document.getElementById('message');
@@ -110,7 +111,7 @@ function kliklp() {
         window.location.href='lupapw.html';
     }, 1000);
 }
-const refresh = document.getElementById('pepek')
+const refresh = document.getElementById('memutar')
 refresh.addEventListener('click',function(){
     setTimeout(function() {
         refreshCaptcha();
