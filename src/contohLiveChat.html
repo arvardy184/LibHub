@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contohLiveChat</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  </head>
+    <style src="../dist/output.css"></style>
+</head>
   <style>
     <!--css note-->
     #pp{
@@ -69,12 +70,15 @@
     #texta::-webkit-scrollbar{
       display: none;
     }
+    #chatcontent::-webkit-scrollbar{
+        display: none;
+    }
     #texta{
       scrollbar-width: none;
     }
     #containerpesan{
       z-index: 1;
-      opacity: 100;
+      opacity: 0;
       transition: .5s;
     }
     #containerpesan.show{
@@ -88,10 +92,10 @@
   <body class="bg-cover bg-center bg-fixed flex" style="background-image: url(../public/assets/perpus.jpg)">
     <!--KODE BUAT CHAT MULAI-->
     <div id="containerpesan" class="containerpesan flex bg-cover bg-white overflow-auto bg-opacity-50 h-full w-full ml-0 mr-0 mb-0 mt-0 bg-fixed fixed">
-      <div id="pp" class=" overflow-auto container mx-auto p-2 my-auto w-full">
+      <div id="pp" class=" overflow-y-auto container mx-auto p-2 my-auto w-full">
         
-        <div  class="bg-gray-800 outline-purple-800 p-6 max-w-md mx-auto rounded-3xl bg-opacity-80 z-0 ">
-          <div id="chatcontent" class="chatcontent mb-3 flex-col flex w-full bg-white p-3 rounded-2xl max-h-96 overflow-auto space-y-2">
+        <div  class="bg-gray-800 outline-purple-800 p-6 max-w-[2px] mx-auto rounded-3xl bg-opacity-80 z-0 ">
+          <div id="chatcontent" class="chatcontent mb-3 flex-col flex w-full overflow-auto p-3 rounded-2xl max-h-96 bg-white space-y-2">
             <div id="spanchat" class="flex-col flex w-full rounded-2xl  space-y-2 max-h-none h-full">
                 <span class=" bg-gray-800 text-white w-fit maxw2 p-4 rounded-3xl self-start">
                     Ada yang bisa saya bantu?
@@ -112,22 +116,23 @@
             
              
           </div>
-          <div id="classpesan" class=" hidmx-auto my-auto pb-3">
+          <div id="classpesan" class="mx-auto my-auto pb-3 hidden">
             <form action="#" class="items-center flex resize-y">
-              <textarea id="texta" class="resize-none border-none outline-none bg-blue-600 w-full rounded-3xl p-2 " name="" id="" rows="1" placeholder="ketikkan pesan"></textarea>
-              <button class="bg-white rounded-3xl w-fit p-1 hover:bg-green-600 transition-all ss" type="submit">Kirim</button>
+              <textarea id="texta"  tonkeydown="" class="resize-none border-none outline-none bg-blue-600 w-full rounded-3xl p-3 text-white" name="" id="" rows="1" placeholder="ketikkan pesan"></textarea>
+              <button onclick="kirimpesan()" class="bg-white rounded-3xl ml-1 w-fit hover:bg-green-600 transition-all p-3" type="submit">Kirim</button>
             </form>
           </div>  
           <button onclick="wowilang()" class="bg-white rounded-3xl w-full p-1 hover:bg-green-600 transition-all" type="submit">Back</button>
-          <button id="classlive" class="bg-red-500 rounded-3xl w-md p-1 mx-auto my-auto mt-3 w-full hover:bg-green-600 transition-all" type="submit">Keluar dari Live Chat</button>
-          
+          <button id="classlive" onclick="keluarlive()" class="bg-red-500 rounded-3xl w-md p-1 mx-auto my-auto mt-3 w-full hover:bg-green-600 transition-all hidden" type="submit">Keluar dari Live Chat</button>
+
         </div>
         </div>
         </div>
       </div>
     </div>
     <!--KODE BUAT CHAT AKHIR-->
-    <button onclick="wow()" class="bg-blue-300 mx-auto my-auto z-10 flex">cobain livechat</button>
+    <div class="h-screen "></div>
+    <button onclick="wow()" class="bg-blue-300 mx-auto my-auto z-10 flex p-2 rounded-3xl hover:bg-green-800 transition-all">cobain livechat</button>
   </body> 
   <script src="./scriptLiveChat.js">
     
