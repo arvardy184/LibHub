@@ -1,3 +1,19 @@
+var contohDiv = document.getElementById("contohDiv");
+
+// Menambahkan event listener untuk mendeteksi perubahan ukuran window
+window.addEventListener("resize", function() {
+    // Mendapatkan lebar dan tinggi window saat ini
+    var lebarWindow = window.innerWidth;
+    var tinggiWindow = window.innerHeight;
+    
+    // Menampilkan informasi ukuran window pada elemen div
+   console.log(lebarWindow)
+   
+});
+const contoh = document.getElementById('pk')
+setInterval(() => {
+  contoh.style.transform="translatey(20px)"
+}, 2000);
 const nig = document.getElementById('nig')
 function backdulu(){
     

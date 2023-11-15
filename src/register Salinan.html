@@ -20,7 +20,10 @@
     top: 0;
     animation: moveDown 1s ease-in; /* Menyertakan animasi 'moveDown' dengan durasi 2 detik dan efek 'ease', diulang secara tak terbatas */
   }
-  
+  .maxw{
+    
+    
+  }
   
     
     @keyframes ilangatas{
@@ -84,24 +87,6 @@
     .kebawah{
         animation : down  0.2s linear
     }
-    <!--css note-->
-    .chatcontent{
-      grid-row-gap: 1rem;
-    }
-    .flexend{
-      align-self: flex-end;
-    }
-    .maxw2{
-      max-width: 50%;
-    }
-    #texta::-webkit-scrollbar{
-      display: none;
-    }
-    #texta{
-      scrollbar-width: none;
-      list-style: none;
-    }
-   
     @keyframes down{
         0%{
             transform: translateY(-100%);
@@ -118,22 +103,16 @@
             opacity: 100%;
         }
     }
-    #pk{
-      margin-left: 16rem;
-      
-    }
     #pp{
     height: fit-content;
-  
+    max-width: 80vw;
+    width: 26rem;
     }
     @media(max-width:500px){
         #pp{
           scale: 80%;
-          
-        }
-        #pk{
-          transform:translateX(-20%);
-          
+          max-width: 100vw;
+          width: 23rem;
         }
         body{
             font-size: 14px;
@@ -142,22 +121,16 @@
     @media(max-width:350px){
         #pp{
         scale: 70%;
+        max-width: 100%;
         }
         body{
             font-size: 12px;
         }
     }
-    @media(max-height:600px){
+    @media(max-height:500px){
         #pp{
-        scale: 90%;
-        }
-        body{
-            font-size: 12px;
-        }
-    }
-    @media(max-height:450px){
-        #pp{
-        scale: 80%;
+        scale: 70%;
+        max-width: 100%;
         }
         body{
             font-size: 12px;
@@ -165,7 +138,8 @@
     }
     @media(max-height:350px){
         #pp{
-        scale: 70%;
+        scale: 50%;
+        max-width: 100%;
         }
         body{
             font-size: 12px;
@@ -180,27 +154,28 @@
         }
     }
   </style>
-  <body class="bg-cover bg-center bg-fixed flex" style="background-image: url(../public/assets/perpus.jpg)">
-    
-    <div class=" flex bg-cover bg-white overflow-auto bg-opacity-50 h-full w-full ml-0 mr-0 mb-0 mt-0 bg-fixed fixed">
-      <div  class=" overflow-auto container mx-auto p-2 my-auto">
+  <body class="bg-cover bg-center bg-fixed overflow-auto flex" style="background-image: url(../public/assets/perpus.jpg)">
+    <header class="bg-white" > 
+    </header>
+    <div class="overflow-auto flex bg-cover bg-black bg-opacity-50 h-screen w-screen ml-0 mr-0 mb-0 mt-0 bg-fixed fixed">
+      <div class="container mx-auto p-2 my-auto">
         
-        <div id="pp" class="bg-gray-800 outline-purple-800 p-6 max-w-sm mx-auto rounded-3xl bg-opacity-80 z-0 items-center">
-          <h1 class="font-semibold text-white mb-4">Register</h1>
+        <div id="pp" class="bg-gray-400 outline-purple-800 p-6 mx-auto rounded-3xl bg-opacity-80 z-0">
+          <h1 class="font-semibold mb-4">Register</h1>
           <form id="register-form">
             <div class="mb-4">
-              <label for="name" class="block font-medium  text-white">Username</label>
+              <label for="name" class="block font-medium text-gray-950">Username</label>
               <input type="text" id="name" name="name" class="mt-1 p-2 w-full border rounded-md" required>
             </div>
             <div class="mb-4">
-              <label for="email" class="block  font-medium text-white">Email</label>
+              <label for="email" class="block  font-medium text-gray-950">Email</label>
               <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded-md" required>
             </div>
             <div class="mb-4">
-              <label for="password" class="block  font-medium text-white">Password</label>
+              <label for="password" class="block  font-medium  text-gray-950">Password</label>
               <input type="password" id="password" name="password" class="mt-1 p-2 w-full border rounded-md" required>
             </div>
-            <div class="LayaniGw text-white">
+            <div class="LayaniGw">
               <input id="check" type="checkbox" class="mb-0" required></input>
               <label for="checkbox">Saya Menyetujui Syarat dan Ketentuan</label>
             </div>
@@ -211,58 +186,18 @@
             <button onclick="kliksnk()" id="syarat" type ="button" class="syarat mb-2 text-white hover:underline hover">Baca Syarat dan Ketentuan</button>
             <div class="text-white">
               Sudah punya akun?
-              <button onclick="kliksa()" id="sudahak" type ="button" class="syarat mb-2 text-blue-500 hover:underline hover">Coba Login</button>
+              <button onclick="kliksa()" id="sudahak" type ="button" class="syarat mb-2 text-blue-800 hover:underline hover">Coba Login</button>
             </div>
             <button id ="mengsukses" onclick="animasikan()" type="submit" class=" w-full bg-blue-500 text-white p-2 rounded-md hover:bg-yellow-700 transition">Continue</button>    
           </form>
         </div>
       </div>
     </div>
-    <!--KODE BUAT CHAT MULAI-->
-    <div class=" flex bg-cover bg-white overflow-auto bg-opacity-50 h-full w-full ml-0 mr-0 mb-0 mt-0 bg-fixed fixed">
-      <div  class=" overflow-auto container mx-auto p-2 my-auto w-full">
-        
-        <div id="pp" class="bg-gray-800 outline-purple-800 p-6 max-w-md mx-auto rounded-3xl bg-opacity-80 z-0 ">
-          <div id="chatcontent" class="chatcontent  flex-col flex w-full bg-white p-3 rounded-2xl max-h-96 overflow-auto">
-            <span class=" bg-black text-white w-fit maxw2 p-4 rounded-3xl self-start">
-              pepek
-            </span>
-            <span class="self-end bg-black text-white w-fit maxw2 p-4 rounded-3xl">
-             palamu kontol
-            </span> 
-            <span class="self-end bg-black text-white w-fit maxw2 p-4 rounded-3xl">
-              palamu kontol
-             </span> 
-             <span class="self-end bg-black text-white w-fit maxw2 p-4 rounded-3xl">
-              palamu kontol
-             </span> 
-             <span class="self-end bg-black text-white w-fit maxw2 p-4 rounded-3xl">
-              palamu kontol
-             </span> 
-             <span class="self-end bg-black text-white w-fit maxw2 p-4 rounded-3xl">
-              palamu kontol
-             </span> 
-             
-          </div>
-          <div class=" mx-auto my-auto pt-3 pb-3">
-            <form action="#" class="items-center flex resize-y">
-              <textarea id="texta" class="resize-none border-none outline-none bg-blue-600 w-full rounded-3xl p-2 " name="" id="" rows="1" placeholder="ketikkan pesan"></textarea>
-              <button class="bg-white rounded-3xl w-fit p-1 hover:bg-green-600 transition-all ss" type="submit">Kirim</button>
-            </form>
-          </div>  
-          <button class="bg-white rounded-3xl w-full p-1 hover:bg-green-600 transition-all" type="submit">Back</button>
-          <button class="bg-red-500 rounded-3xl w-md p-1 mx-auto my-auto mt-3 w-full hover:bg-green-600 transition-all" type="submit">Keluar dari Live Chat</button>
-          
-        </div>
-        </div>
-        </div>
-      </div>
-    </div>
-    <!--KODE BUAT CHAT AKHIR-->
+    
     <div id="putar" class="my-auto mx-auto animate-spin hidden">
       <img for="button" src="../public/assets/refresh.png" alt="w" class="w-28 "></img>
     </div>
-    <div id="wow" class=" flex blur-sm p-2 h-screen w-screen fixed left-0 top-0 ml-0 mr-0 mb-0 mt-0 bg-fixed bg-black bg-opacity-50 hidden z-10">
+    <div id="wow" class="overflow-auto flex blur-sm p-2 h-screen w-screen fixed left-0 top-0 ml-0 mr-0 mb-0 mt-0 bg-fixed bg-black bg-opacity-50 hidden z-10">
       <div class="container mx-auto p-2 my-auto">
         <div id="snk" class=" bg-white rounded-3xl shadow-lg my-auto mx-auto max-w-lg selection:fixed">
           <div class="border-b-2 spacing-1 px-4 py-2">
@@ -280,7 +215,7 @@
         </div>
       </div>
     </div>
-    <div class=" flex bg-cover  bg-white bg-opacity-50 h-full w-full ml-0 mr-0 mb-0 mt-0 fixed hidden" id="captchakun">
+    <div class="overflow-auto flex bg-cover  bg-white bg-opacity-50 h-full w-full ml-0 mr-0 mb-0 mt-0 fixed hidden" id="captchakun">
       <div class="p-6 bg-black max-w-xs rounded-3xl mx-auto my-auto bg-opacity-80" id="nig">
           <p class="text-white pb-2 font-bold">Masukkan captcha yang benar</p>
           <div class="ml-12">
@@ -320,5 +255,4 @@
   <script src="./scriptregister.js">
     
   </script>
-  <script></script>
 </html>
