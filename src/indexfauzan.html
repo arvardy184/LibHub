@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/search.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/output.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Belajar Tailwind</title>
+</head>
+<style>
+  .maxw{
+    max-width: 20vw;
+  }
+  .maxh{
+    max-height: 80vh;
+  }
+  #bookScroll1::-webkit-scrollbar{
+    display: none;
+  }
+  @media (max-width: 450px){
+    #isi {
+    flex-direction: columnn;
+  }
+  }
+</style>
+
+    <body class="font-Jakarta h-fit bg-slate-500 ">
+        <div id="header" class="bg-base-100 py-5 flex">
+          <div class="navbar bg-base-100 w-full">
+            <div id="isi" class="w-full gap-3">
+              <div class="flex-1">
+                <a class="btn btn-ghost normal-case text-xl w-full">LibHub</a>
+              </div>
+              <div class="flex-1">
+                <button class="btn btn-ghost normal-case text-xl bg-white w-36"><div class="gg-search"></div>Search</button>
+              </div>
+  
+              <div class="flex-none">
+                <button class=" transition-all rounded-3xl p-3 bg-blue-400 text-black btn btn-ghost">
+                  Login
+                  
+                  </button>
+                  <button class=" transition-all rounded-3xl p-3 bg-blue-400 text-black btn btn-ghost">
+                    Register
+                    
+                    </button>
+              
+              </div>
+            </div>
+           
+              
+              
+
+          
+          </div>
+        </div>
+
+
+<div class="flex items-center justify-center ">
+        <h1 class="text-2xl font-semibold p-6 text-slate-900 ">Temukan Buku Menarik di LibHub</h1>
+
+    </div>
+    <div class="flex items-center justify-center">
+      <!-- Basic Text Button -->
+<button class="text-slate-700 hover:text-blue-700 focus:outline-none">Gabung Sekarang</button>
+
+ </div>
+
+
+    <div class="relative flex items-center ">
+    <!-- Container untuk buku-buku dengan scrollable horizontal -->
+
+     <!-- Panah kiri -->
+  <button onclick="scrollLeft()" class="absolute left-0 z-10 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-r">
+    &#8592;
+  </button>
+
+<div id="bookScroll1" class="flex overflow-auto py-4 space-x-4 noscroll">
+ 
+  </div>
+
+  
+  
+ <!-- Panah kanan -->
+  <button onclick="scrollRight()" class="absolute right-0 z-10 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-l">
+    &#8594;
+  </button>
+</div>
+
+<div class="relative flex items-center p-2 m-4 space-x-4 scroll-px-60 bg-stone-800 rounded-lg">
+    <!-- Container untuk buku-buku dengan scrollable horizontal -->
+
+     <!-- Panah kiri -->
+  <button onclick="scrollLeft()" class="absolute left-0 z-10 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-r">
+    &#8592;
+  </button>
+
+<div id="bookScroll2" class="flex overflow-x-auto py-4 space-x-4">
+    
+  
+    <!-- Tambahkan lebih banyak buku jika perlu -->
+  </div>
+
+  
+  
+ <!-- Panah kanan -->
+  <button onclick="scrollRight()" class="absolute right-0 z-10 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-l">
+    &#8594;
+  </button>
+</div>
+
+    </body>
+
+   <!-- Footer -->
+   <footer class="bg-gray-800 text-white text-center py-6">
+    <div class="container mx-auto px-6">
+      <div class="flex justify-center mb-6">
+        <!-- Social Media Links -->
+        <a href="https://facebook.com" class="mx-2">
+          <!-- You can include icons from a library like FontAwesome here -->
+          Facebook
+        </a>
+        <a href="https://twitter.com" class="mx-2">
+          Twitter
+        </a>
+        <a href="https://instagram.com" class="mx-2">
+          Instagram
+        </a>
+        <!-- Add more social media links as needed -->
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="flex justify-center mb-4">
+        <a href="/about" class="mx-2">About Us</a>
+        <a href="/contact" class="mx-2">Contact</a>
+        <a href="/terms" class="mx-2">Terms of Service</a>
+        <!-- Add more navigation links as needed -->
+      </div>
+
+      <!-- Contact Information -->
+      <div class="text-center mb-4">
+        <span class="block">Email: libhub@library.com</span>
+        <span class="block">Phone: (123) 8585-2928</span>
+      </div>
+
+      <div class="text-center">
+        <p>&copy; 2023 Perpustakaan Kami. Hak Cipta Dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+    
+        <script src="./index.js">
+
+
+        </script>
+</body>
+</html>

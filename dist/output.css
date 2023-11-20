@@ -8,6 +8,7 @@
 */
 
 *,
+
 ::before,
 ::after {
   box-sizing: border-box;
@@ -2278,10 +2279,6 @@ details.collapse summary::-webkit-details-marker {
 
 .z-0 {
   z-index: 0;
-}
-
-.z-20 {
-  z-index: 20;
 }
 
 .m-4 {

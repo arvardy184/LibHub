@@ -9,9 +9,6 @@ function backdulu(){
         refreshCaptcha();
         captchaElementInput.value = ''
     },500);
-    
-    
-    
 }
 bener.style.display ="none"
 const captchakun = document.getElementById('captchakun')
@@ -184,7 +181,6 @@ function cekcaptcha(){
         message.classList.remove('bg-red-400')
         },1500);
     }
-    
 }
 const putar = document.getElementById('putar')
 function klikds(){

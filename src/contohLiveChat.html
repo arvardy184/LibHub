@@ -5,96 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contohLiveChat</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style src="../dist/output.css"></style>
 </head>
   <style>
-    <!--css note-->
-    #pp{
-    height: fit-content;
-  
-    }
-    @media(max-width:500px){
-        #pp{
-          scale: 80%;
-          
-        }
-        #pk{
-          transform:translateX(-20%);
-          
-        }
-        body{
-            font-size: 14px;
-        }
-    }
-    @media(max-width:350px){
-        #pp{
-        scale: 70%;
-        }
-        body{
-            font-size: 80%;
-        }
-    }
-    @media(max-height:600px){
-        #pp{
-        scale: 90%;
-        }
-        body{
-            font-size: 12px;
-        }
-    }
-    @media(max-height:450px){
-        #pp{
-        scale: 80%;
-        }
-        body{
-            font-size: 12px;
-        }
-    }
-    @media(max-height:350px){
-        #pp{
-        scale: 70%;
-        }
-        body{
-            font-size: 12px;
-        }
-    }
-    .chatcontent{
-      grid-row-gap: 1rem;
-    }
-    .flexend{
-      align-self: flex-end;
-    }
-    .maxw2{
-      max-width: 80%;
-    }
-    #texta::-webkit-scrollbar{
-      display: none;
-    }
-    #chatcontent::-webkit-scrollbar{
-        display: none;
-    }
-    #texta{
-      scrollbar-width: none;
-    }
-    #containerpesan{
-      z-index: 1;
-      opacity: 0;
-      transition: .5s;
-    }
-    #containerpesan.show{
-      transition: 1.5s;
-      opacity: 100;
-    }
-    #containerpesan.maju{
-      z-index: 30;
-    }
+   
   </style>
-  <body class="bg-cover bg-center bg-fixed flex" style="background-image: url(../public/assets/perpus.jpg)">
+  <body id="scrl" class="bg-cover bg-center bg-fixed flex" style="background-image: url(../public/assets/perpus.jpg)">
     <!--KODE BUAT CHAT MULAI-->
     <div id="containerpesan" class="containerpesan flex bg-cover bg-white overflow-auto bg-opacity-50 h-full w-full ml-0 mr-0 mb-0 mt-0 bg-fixed fixed">
       <div id="pp" class=" overflow-y-auto container mx-auto p-2 my-auto w-full">
         
-        <div  class="bg-gray-800 outline-purple-800 p-6 max-w-[2px] mx-auto rounded-3xl bg-opacity-80 z-0 ">
+        <div  class="bg-gray-800 outline-purple-800 p-6 max-w-xl mx-auto rounded-3xl bg-opacity-80 z-0 ">
           <div id="chatcontent" class="chatcontent mb-3 flex-col flex w-full overflow-auto p-3 rounded-2xl max-h-96 bg-white space-y-2">
             <div id="spanchat" class="flex-col flex w-full rounded-2xl  space-y-2 max-h-none h-full">
                 <span class=" bg-gray-800 text-white w-fit maxw2 p-4 rounded-3xl self-start">
@@ -117,8 +37,8 @@
              
           </div>
           <div id="classpesan" class="mx-auto my-auto pb-3 hidden">
-            <form action="#" class="items-center flex resize-y">
-              <textarea id="texta"  tonkeydown="" class="resize-none border-none outline-none bg-blue-600 w-full rounded-3xl p-3 text-white" name="" id="" rows="1" placeholder="ketikkan pesan"></textarea>
+            <form action="#" class="items-center flex">
+              <textarea id="texta"  onkeydown="" class="resize-none border-none outline-none bg-blue-600 w-full rounded-3xl p-3 text-white" name="" id="" rows="1" placeholder="ketikkan pesan"></textarea>
               <button onclick="kirimpesan()" class="bg-white rounded-3xl ml-1 w-fit hover:bg-green-600 transition-all p-3" type="submit">Kirim</button>
             </form>
           </div>  

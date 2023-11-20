@@ -1,3 +1,39 @@
+const pwbaru = document.getElementById('pwbaru')
+const cekpwbaru = document.getElementById('pwbarukonfirm')
+const emailterkirim = document.getElementById('emailkirim')
+setInterval(() => {
+    emailterkirim.innerHTML=document.getElementById('email').value
+    console.log(document.getElementById('email').value)
+}, 100);
+const detikan=document.getElementById('p');
+const mengsuksesf = document.getElementById('mengsuksesff');
+var detik=0;
+menit()
+function menit(){
+    setInterval(() => {
+        if(detik>=0){
+        detikan.innerHTML=detik;
+        detik--
+        }
+        else{
+        detikan.classList.add('hidden')
+        mengsuksesf.classList.remove('hidden')
+        }
+    }, 1000);
+}
+function resetMenu(){
+    detik=3;
+    setTimeout(function(){
+    alert("kode verifikasi telah terkirim")
+    detikan.classList.remove('hidden')
+    mengsuksesf.classList.add('hidden')
+    }, 100);
+}
+function kliksubmit(){
+    alert("Password terganti")
+    window.location.reload(true);
+}
+     
 const nig = document.getElementById('nig')
 function backdulu(){
     
@@ -107,6 +143,50 @@ function cekcaptcha(){
         },1500);
     }
 }
+const formb = document.getElementById('fff-form');
+formb.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    fetch('/login', {
+        method: 'POST',
+        body: data,
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+    if(pwbaru.value==cekpwbaru.value){
+        alert("PW Terganti")
+        window.location.reload(true);
+    }
+    else{
+        alert("Password Ga Sama")
+    }
+});
+const gantikanf = document.getElementById('gantikanf');
+const forma = document.getElementById('ff-form');
+forma.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    fetch('/login', {
+        method: 'POST',
+        body: data,
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+    gantikanf.classList.remove('hidden');
+    gantikan.classList.add('hidden');
+});
+const gantikan = document.getElementById('gantikan');
+const cek = document.getElementById('cek');
 const form = document.getElementById('login-form');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -126,7 +206,8 @@ form.addEventListener('submit', function (e) {
         alert("ISI CAPTCHA NYA MASBRO!!")
     }
     else{
-        
+        cek.classList.add('hidden');
+        gantikan.classList.remove('hidden');
     }
 });
 function klikds(){
