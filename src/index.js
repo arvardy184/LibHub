@@ -1,4 +1,29 @@
 
+const login = document.getElementById("log")
+var isLogin=localStorage.getItem("login")
+const reg = document.getElementById("reg")
+const blmlog = document.getElementById("blmlog")
+function cekLogin(){
+ 
+  console.log(isLogin);
+  if(isLogin=="true"){
+    console.log(isLogin);
+    document.getElementById("profil").classList.remove("hidden")
+    login.classList.add("hidden")
+    blmlog.classList.add("hidden")
+  }
+  else{
+    console.log(isLogin);
+    document.getElementById("profil").classList.add("hidden")
+    login.classList.remove("hidden")
+    blmlog.classList.remove("hidden")
+  }
+}
+function logout(){
+  localStorage.setItem("login",false); 
+  window.location.reload(true);
+}
+cekLogin()
 const searchInput = document.getElementById("search");
 const genreSelect = document.getElementById("genre");
 const year = document.getElementById("year");
@@ -78,25 +103,98 @@ const resultContainer = document.getElementById("result");
       }
   
       books.forEach(book => {
+        var stok = book.stok;
         const bookCard = document.createElement("div");
-        bookCard.innerHTML = `
-           <div class="flex flex-row max-w-xl border-none">
-      <button id="all" onclick="menuBuku('${book.name}')" class="border-none transition-all scales relative gap-2 flex">
-        <img src="${book.imageLink}" alt="${book.name}" class="h-auto object-cover rounded-lg shadow-md w-60 mb-2">
-      <div class="flex flex-col">
-        <button class="bg-black">reservasi</button>
-        <div class="mt-2 bg-white p-4 rounded-lg shadow-lg w-96 mb-2 h-fit  ">
-          <h3 class="text-lg font-semibold justify-center items-center flex">${book.name}</h3>
-          <p class="text-gray-600">Penulis: ${book.author}</p>
-          <p class="text-gray-600">Tahun Terbit: ${book.year}</p>
-        </div>
-      </div>
-      
-      </button>
-     
-      
-    </div>
-        `;
+        bookCard.innerHTML =isLogin=="true"?stok==0? 
+        //Jika sudah login tapi buku kosong
+        `
+           <div class="flex flex-row  border-none">
+            <button id="all" onclick="menuBuku('${book.name}')" class="border-none transition-all scales relative gap-2 max-w-xl">
+              <img src="${book.imageLink}" alt="${book.name}" class="h-auto object-cover rounded-lg shadow-md w-60 mb-2">
+              <div class="w-full container bg-opacity-100 place-self-center">
+                <div class="bg-black text-white rounded-lg p-1">
+                  <h3 class="text-lg font-semibold justify-center items-center flex">${book.name}</h3>
+                </div>
+                <div id="komp" class="mt-2 bg-white p-4 rounded-lg shadow-lg mb-2 h-fit w-full">
+                  
+                  <p class="text-gray-600">Penulis: ${book.author}</p>
+                  <p class="text-gray-600">Tahun Terbit: ${book.year}</p>
+                </div>
+                <div class="flex flex-row justify-between text-white">
+                    <div class="rounded-lg self-start w-full bg-blue-400">Rating: ${book.rating}</div>
+                    <div class="rounded-lg self-end w-full bg-yellow-400">Stok: ${book.stok}</div>
+                </div>
+              </div>
+             </button>
+             <div class="flex flex-col place-self-center ml-2">
+             <div class="bg-white p-4 rounded-lg shadow-lg mb-2 h-fit w-full">
+             <p class="text-gray-600">ISBN: ${book.isbn}</p>
+             <p class="text-gray-600">Jumlah Halaman: ${book.halaman}</p>
+             <p class="text-gray-600">Bahasa: ${book.bahasa}</p>
+             </div>
+             <button onclick="window.location.reload(true)" class="bg-blue-400 h-fit place-self-center gap-2 p-2 rounded-2xl scales hover:bg-green-600">Reservasi Buku</button>
+             </div>
+           </div>
+        `:
+        //Jika sudah login tapi buku ada stoknya
+        `
+           <div class="flex flex-row  border-none">
+            <button id="all" onclick="menuBuku('${book.name}')" class="border-none transition-all scales relative gap-2">
+              <img src="${book.imageLink}" alt="${book.name}" class="h-auto object-cover rounded-lg shadow-md w-60 mb-2">
+              <div class="w-full container bg-opacity-100 place-self-center">
+                <div class="bg-black text-white rounded-lg p-1">
+                  <h3 class="text-lg font-semibold justify-center items-center flex">${book.name}</h3>
+                </div>
+                <div id="komp" class="mt-2 bg-white p-4 rounded-lg shadow-lg mb-2 h-fit w-full">
+                  
+                  <p class="text-gray-600">Penulis: ${book.author}</p>
+                  <p class="text-gray-600">Tahun Terbit: ${book.year}</p>
+                </div>
+                <div class="flex flex-row justify-between text-white">
+                    <div class="rounded-lg self-start w-full bg-blue-400">Rating: ${book.rating}</div>
+                    <div class="rounded-lg self-end w-full bg-yellow-400">Stok: ${book.stok}</div>
+                </div>
+              </div>
+             </button>
+             <div class="place-self-center ml-2 flex flex-col">
+             <div class="bg-white p-4 rounded-lg shadow-lg mb-2 h-fit w-full">
+             <p class="text-gray-600">ISBN: ${book.isbn}</p>
+             <p class="text-gray-600">Jumlah Halaman: ${book.halaman}</p>
+             <p class="text-gray-600">Bahasa: ${book.bahasa}</p>
+             </div>
+             <button onclick="window.location.reload(true)" class="bg-blue-400 h-fit place-self-center gap-2 p-2 rounded-2xl scales hover:bg-green-600">Tambahkan ke Keranjang</button>
+             </div>
+           </div>
+        `
+        ://Jika blm login
+        `
+           <div class="flex flex-row  border-none">
+            <button id="all" onclick="menuBuku('${book.name}')" class="border-none transition-all scales relative gap-2">
+              <img src="${book.imageLink}" alt="${book.name}" class="h-auto object-cover rounded-lg shadow-md w-60 mb-2">
+              <div class="w-full container bg-opacity-100 place-self-center">
+                <div class="bg-black text-white rounded-lg p-1">
+                  <h3 class="text-lg font-semibold justify-center items-center flex">${book.name}</h3>
+                </div>
+                <div id="komp" class="mt-2 bg-white p-4 rounded-lg shadow-lg mb-2 h-fit w-full">
+                  
+                  <p class="text-gray-600">Penulis: ${book.author}</p>
+                  <p class="text-gray-600">Tahun Terbit: ${book.year}</p>
+                </div>
+                <div class="flex flex-row justify-between text-white">
+                    <div class="rounded-lg self-start w-full bg-blue-400">Rating: ${book.rating}</div>
+                    <div class="rounded-lg self-end w-full bg-yellow-400">Stok: ${book.stok}</div>
+                </div>
+              </div>
+             </button>
+             <div class="flex flex-col place-self-center ml-2">
+             <div class="bg-white p-4 rounded-lg shadow-lg mb-2 h-fit w-full">
+             <p class="text-gray-600">ISBN: ${book.isbn}</p>
+             <p class="text-gray-600">Jumlah Halaman: ${book.halaman}</p>
+             <p class="text-gray-600">Bahasa: ${book.bahasa}</p>
+             
+           </div>
+        `
+        ;
         resultContainer.appendChild(bookCard);
       });
     }
@@ -175,9 +273,61 @@ menuContainer.innerHTML=""
 menuContainer.scrollTop=0;
 
   books.forEach(book => {
+    var stok = book.stok;
     const bookCard = document.createElement("div");
-    bookCard.innerHTML = `
-    <div class="w-full flex flex-col border-none group overflow-auto">
+    bookCard.innerHTML =isLogin=="true"?stok==0?
+    //Jika stok buku kosong dan sudah login
+    `
+    <div id="menu" class="w-full flex flex-row gap-2 border-none group overflow-auto">
+    <div id="${book.name}" class="max border-none place-self-start text-black flex flex-col">
+    <img src="${book.imageLink}" alt="${book.name}" class=" max h-auto object-cover rounded-lg shadow-md ">
+    <h3 class="font-semibold flex text-xl text-center justify-center">${book.name}</h3>
+    <h3 class="font-semibold flex text-xl text-center justify-center">Stok Buku: ${book.stok}</h3>
+    <h3 class="font-semibold flex text-xl text-center justify-center">Rating: ${book.rating}</h3>
+    <button class="place-items-center bg-blue-600 p-2 rounded-2xl scales hover:bg-green-800 transition-all mb-2">Reservasi Buku</button>
+    <button class="place-items-center bg-blue-600 p-2 rounded-2xl scales hover:bg-green-800 transition-all">Ulas Buku</button>
+    </div>
+    <div class="bg-black p-4 rounded-lg shadow-lg h-auto">
+
+    <p class="text-white text-lg">Penulis: ${book.author}</p>
+    <p class="text-white text-lg">Tahun Terbit: ${book.year}</p>
+    <p class="text-white text-lg">Penerbit: ${book.publisher}</p>
+    <p class="text-white text-lg">Genre: ${book.genre}</p>
+    <p class="text-white text-lg">Jumlah halaman: ${book.halaman}</p>
+    <p class="text-white text-lg">Bahasa: ${book.bahasa}</p>
+    <p class="text-white text-lg">ISBN: ${book.isbn}</p>
+    <p class="text-white text-lg">Deskripsi:</p>
+    <p class="text-white text-lg">${book.description}</p>
+  </div>
+    
+  </div>
+    `:
+    //Jika stok ga kosong dan sudah login
+    `<div id="menu" class="w-full flex flex-row gap-2 border-none group overflow-auto">
+    <div id="${book.name}" class="max border-none place-self-start text-black flex flex-col">
+    <img src="${book.imageLink}" alt="${book.name}" class=" max h-auto object-cover rounded-lg shadow-md ">
+    <h3 class="font-semibold flex text-xl text-center justify-center">${book.name}</h3>
+    <h3 class="font-semibold flex text-xl text-center justify-center">Stok Buku: ${book.stok}</h3>
+    <h3 class="font-semibold flex text-xl text-center justify-center">Rating: ${book.rating}</h3>
+    <button class="place-items-center bg-blue-600 p-2 rounded-2xl scales hover:bg-green-800 transition-all mb-2">Tambah Ke Keranjang</button>
+    <button class="place-items-center bg-blue-600 p-2 rounded-2xl scales hover:bg-green-800 transition-all">Ulas Buku</button>
+    </div>
+    <div class="bg-black p-4 rounded-lg shadow-lg h-auto">
+
+    <p class="text-white text-lg">Penulis: ${book.author}</p>
+    <p class="text-white text-lg">Tahun Terbit: ${book.year}</p>
+    <p class="text-white text-lg">Penerbit: ${book.publisher}</p>
+    <p class="text-white text-lg">Genre: ${book.genre}</p>
+    <p class="text-white text-lg">Jumlah halaman: ${book.halaman}</p>
+    <p class="text-white text-lg">Bahasa: ${book.bahasa}</p>
+    <p class="text-white text-lg">ISBN: ${book.isbn}</p>
+    <p class="text-white text-lg">Deskripsi:</p>
+    <p class="text-white text-lg">${book.description}</p>
+  </div>
+    
+  </div>`
+  //jika belum login
+  :` <div class="w-full flex flex-col border-none group overflow-auto">
     <div id="${book.name}"  class="border-none max-w-xs place-self-center">
     <img src="${book.imageLink}" alt="${book.name}" class="w-full h-auto object-cover rounded-lg shadow-md ">
     </div>
@@ -193,12 +343,11 @@ menuContainer.scrollTop=0;
     <p class="text-white text-lg">ISBN: ${book.isbn}</p>
     <p class="text-white text-lg">Stok: ${book.stok}</p>
     <p class="text-white text-lg">Deskripsi:</p>
-    <p class="text-white text-lg text-justify">${book.description}</p>
+    <p class="text-white text-lg">${book.description}</p>
     <h3 class="font-semibold text-center justify-center items-center flex text-xl">Ingin meminjam buku? <a href="register.html" class="text-blue-400 hover:underline">Daftar Sekarang</a> </h3>
   </div>
     
-  </div>
-    `;
+  </div>`;
     menuContainer.append(bookCard);
   });
 }
@@ -269,8 +418,8 @@ function menubuku2(){
   });
 }
   
-
 searchBook()
+
   
             
   // main.js
