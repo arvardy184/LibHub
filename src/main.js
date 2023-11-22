@@ -1,5 +1,5 @@
 // main.js
-document.addEventListener("DOMContentLoaded", function () {
+
     // Ambil data buku dari JSON
     const booksData = fetch("buku.json")
       .then(response => response.json())
@@ -8,12 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ambil elemen HTML
     const searchInput = document.getElementById("search");
     const genreSelect = document.getElementById("genre");
-    const yearInput = document.getElementById("year");
-    const ratingInput = document.getElementById("rating");
+    const year = document.getElementById("year");
+    const rating = document.getElementById("rating");
     const resultContainer = document.getElementById("result");
   
     // Fungsi untuk mencari buku berdasarkan filter
-    function searchBooks() {
+    searchBook();
+    function searchBook() {
         const searchTerm = searchInput.value.toLowerCase();
         const selectedGenre = genreSelect.value.toLowerCase();
         const selectedYear = year.value;
@@ -23,9 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const filteredBooks = booksData.then(books => books.filter(book => {
           const matchesSearchTerm = !searchTerm || 
             book.name.toLowerCase().includes(searchTerm) ||
-            book.author.toLowerCase().includes(searchTerm) ||
-            book.genre.toLowerCase().includes(searchTerm) ||
-            (book.publisher && book.publisher.toLowerCase().includes(searchTerm));
+            book.author.toLowerCase().includes(searchTerm) 
+            
+           ;
       
           const matchesGenre = selectedGenre === "" || book.genre.toLowerCase() === selectedGenre;
       
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
             (selectedRating === "bawah3" && book.rating < 3.0)
           );
       
-          return matchesSearchTerm && matchesGenre && matchesYear && matchesRating;
+          return matchesSearchTerm &&  matchesGenre && matchesYear && matchesRating;
         }));
       
         // Tampilkan hasil pencarian
@@ -74,6 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   
     // Panggil fungsi pencarian saat tombol di klik
-    document.querySelector("button").addEventListener("click", searchBooks());
-  });
+    
+
   
