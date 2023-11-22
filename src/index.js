@@ -139,7 +139,7 @@ const resultContainer = document.getElementById("result");
         //Jika sudah login tapi buku ada stoknya
         `
            <div class="flex flex-row  border-none">
-            <button id="all" onclick="menuBuku('${book.name}')" class="border-none transition-all scales relative gap-2">
+            <button id="all" onclick="menuBuku('${book.name}')" class="border-none transition-all scales relative gap-2 max-w-xl">
               <img src="${book.imageLink}" alt="${book.name}" class="h-auto object-cover rounded-lg shadow-md w-60 mb-2">
               <div class="w-full container bg-opacity-100 place-self-center">
                 <div class="bg-black text-white rounded-lg p-1">
@@ -169,7 +169,7 @@ const resultContainer = document.getElementById("result");
         ://Jika blm login
         `
            <div class="flex flex-row  border-none">
-            <button id="all" onclick="menuBuku('${book.name}')" class="border-none transition-all scales relative gap-2">
+            <button id="all" onclick="menuBuku('${book.name}')" class="border-none transition-all scales relative gap-2 max-w-xl">
               <img src="${book.imageLink}" alt="${book.name}" class="h-auto object-cover rounded-lg shadow-md w-60 mb-2">
               <div class="w-full container bg-opacity-100 place-self-center">
                 <div class="bg-black text-white rounded-lg p-1">
