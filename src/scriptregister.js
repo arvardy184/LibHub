@@ -8,12 +8,10 @@ window.addEventListener("resize", function() {
     
     // Menampilkan informasi ukuran window pada elemen div
    console.log(lebarWindow)
-   
+   contoh.style.transform+="translatey(20px)"
 });
 const contoh = document.getElementById('pk')
-setInterval(() => {
-  contoh.style.transform="translatey(20px)"
-}, 2000);
+
 const nig = document.getElementById('nig')
 function backdulu(){
     
@@ -96,8 +94,11 @@ var a = document.getElementById("gerakmang")
       a.classList.add('animated-element');
       
     }
+    
     function kliksnk(){
       x.removeEventListener('animationend',wadidaw);
+      
+      
       mode.classList.remove('hidden')
       x.classList.add('kiri')
       duar.addEventListener('click',kanankh)

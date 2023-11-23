@@ -64,6 +64,7 @@ form.addEventListener('submit', function (e) {
     else{
         if(datausn==("admin") && datapw==("admin123")){
             bener.style.display="block"
+            localStorage.setItem("login",true);
             //Menyambungkan login berhasil disini tod
             setTimeout(function() {
                 benar.classList.remove('opacitykan')
@@ -73,7 +74,7 @@ form.addEventListener('submit', function (e) {
                 bener.style.display ="none"
                 benar.classList.remove('menghilang')
                 benar.classList.add('opacitykan')
-                window.location.reload(true);
+                window.location.href="indexfauzan.html";
             }, 3200);
         }
         else{
