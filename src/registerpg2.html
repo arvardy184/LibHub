@@ -81,6 +81,64 @@
     .kebawah{
         animation : down  0.2s linear
     }
+    #pp{
+    height: fit-content;
+    
+    }
+    @media(max-width:500px){
+        #pp{
+          scale: 80%;
+          
+        
+        }
+        body{
+            font-size: 14px;
+        }
+    }
+    @media(max-width:350px){
+        #pp{
+        scale: 70%;
+       
+        }
+        body{
+            font-size: 12px;
+        }
+    }
+    @media(max-height:600px){
+        #pp{
+        scale: 90%;
+        
+        }
+        body{
+            font-size: 12px;
+        }
+    }
+    @media(max-height:450px){
+        #pp{
+        scale: 80%;
+      
+        }
+        body{
+            font-size: 12px;
+        }
+    }
+    @media(max-height:350px){
+        #pp{
+        scale: 70%;
+      
+        }
+        body{
+            font-size: 12px;
+        }
+    }@media(max-height:300px){
+        #pp{
+        scale: 60%;
+        ;
+        }
+        body{
+            font-size: 12px;
+        }
+    }
     @keyframes down{
         0%{
             transform: translateY(-100%);
@@ -106,28 +164,28 @@
         }
     }
   </style>
-  <body class="bg-cover bg-center bg-fixed overflow-auto flex" style="background-image: url(../public/assets/perpus.jpg)">
+  <body class="bg-cover bg-center bg-fixed overflow-y-auto flex" style="background-image: url(../public/assets/perpus.jpg)">
     <header class="bg-white" > 
     </header>
-    <div class="overflow-auto flex bg-cover bg-white bg-opacity-50 h-full w-full ml-0 mr-0 mb-0 mt-0 bg-fixed fixed">
+    <div class="overflow-auto flex bg-cover bg-opacity-50 h-full w-full ml-0 mr-0 mb-0 mt-0 bg-fixed fixed">
       <div class="container mx-auto p-2 my-auto">
-        <div class="bg-gray-400 outline-purple-800 p-10 max-w-md mx-auto rounded-3xl bg-opacity-80">
-          <h1 class="text-2xl font-semibold mb-4">Lanjut Isi Data Diri</h1>
+        <div id="pp" class="bg-gray-700 outline-purple-800 p-10 mx-auto rounded-3xl bg-opacity-80 max-w-sm">
+          <h1 class="font-semibold mb-4 text-white">Lanjut Isi Data Diri</h1>
           <form id="register-form">
             <div class="mb-4">
-              <label for="name" class="block text-sm font-medium text-gray-950">Nama Lengkap</label>
+              <label for="name" class="block font-medium text-white">Nama Lengkap</label>
               <input type="text" id="name" name="name" class="mt-1 p-2 w-full border rounded-md" required>
             </div>
             <div class="mb-4">
-              <label for="tl" class="block text-sm font-medium text-gray-950">Tanggal Lahir</label>
+              <label for="tl" class="block font-medium text-white">Tanggal Lahir</label>
               <input type="date" id="tl" name="tl" class="mt-1 p-2 w-full border rounded-md" required>
             </div>
             <div class="mb-4">
-              <label for="nik" class="block text-sm font-medium  text-gray-950">NIK</label>
+              <label for="nik" class="block font-medium  text-white">NIK</label>
               <input type="text" id="nik" name="nik" class="mt-1 p-2 w-full border rounded-md" required>
             </div>
             <div class="mb-4">
-                <label for="nohp" class="block text-sm font-medium  text-gray-950">Nomor Hp</label>
+                <label for="nohp" class="block font-medium  text-white">Nomor Hp</label>
                 <input type="text" id="nohp" name="nohp" class="mt-1 p-2 w-full border rounded-md" required>
               </div>
             <button id ="mengsukses"  type="submit" class=" w-full bg-blue-500 text-white p-2 rounded-md hover:bg-yellow-700 transition">Register</button>    
