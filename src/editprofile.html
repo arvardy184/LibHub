@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Edit Profile</title>
+</head>
+<body class="bg-gray-200 h-screen flex items-center justify-center">
+
+    <!-- Container Utama -->
+    <div class="bg-white p-8 rounded shadow-md max-w-md mx-auto">
+
+        <!-- Profile Image -->
+        <img src="path/to/profile-image.jpg" alt="Profile Image" class="w-20 h-20 rounded-full mx-auto mb-4">
+
+        <!-- Form Edit Profile -->
+        <form>
+            <!-- Nama User -->
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-bold mb-2">Nama User:</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="Nama User" value="Nama User">
+            </div>
+
+            <!-- Email User -->
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-bold mb-2">Email User:</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="Email User" value="email@example.com">
+            </div>
+
+            <!-- Tanggal Lahir User -->
+            <div class="mb-4">
+                <label for="birthdate" class="block text-gray-700 font-bold mb-2">Tanggal Lahir:</label>
+                <input type="date" id="birthdate" name="birthdate" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500" value="2000-01-01">
+            </div>
+
+            <!-- Tombol Simpan -->
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
+                Simpan
+            </button>
+        </form>
+
+        <!-- Kembali ke User Profile -->
+        <div class="mt-4 text-center">
+            <a href="profile.html" class="text-blue-500 hover:underline">Kembali ke User Profile</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
