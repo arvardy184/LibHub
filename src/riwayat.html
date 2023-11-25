@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/output.css"/>
+  <title>Halaman Riwayat Peminjaman</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Taruh kustomisasi style tambahan di sini */
+  </style>
+</head>
+<body>
+
+<div class="container mx-auto p-4 bg-slate-800">
+  <!-- Tab bar -->
+  <div class="flex flex-wrap border-b">
+    <button class="tab w-full sm:w-auto py-2 px-4 text-blue-600 border-b-2 border-blue-600 font-medium" data-target="#sedang-dipinjam">Sedang Dipinjam</button>
+    <button class="tab w-full sm:w-auto py-2 px-4 text-gray-600 hover:text-blue-600 hover:border-blue-600 font-medium" data-target="#sudah-dipinjam">Sudah Dipinjam</button>
+    <button class="tab w-full sm:w-auto py-2 px-4 text-gray-600  hover:text-blue-600 hover:border-blue-600 font-medium" data-target="#reservasi">Reservasi</button>
+  </div>
+  
+  <!-- Content for 'Sedang Dipinjam' -->
+  <div id="sedang-dipinjam" class="tab-content mt-4">
+    <!-- List container -->
+    <div class="flex flex-col space-y-4">
+      <!-- Individual item -->
+      <div class="flex flex-col sm:flex-row justify-between p-4 border">
+        <div>
+          <h2 class="font-bold">Judul Buku</h2>
+          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
+          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
+        </div>
+        <div class="mt-4 sm:mt-0 sm:flex sm:items-center">
+          <!-- Placeholder for image -->
+          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center">
+            <span class="text-gray-400">Image</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between p-4 border">
+        <div>
+          <h2 class="font-bold">Judul Buku</h2>
+          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
+          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
+        </div>
+        <div class="mt-4 sm:mt-0 sm:flex sm:items-center">
+          <!-- Placeholder for image -->
+          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center">
+            <span class="text-gray-400">Image</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row justify-between p-4 border">
+        <div>
+          <h2 class="font-bold">Judul Buku</h2>
+          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
+          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
+        </div>
+        <div class="mt-4 sm:mt-0 sm:flex sm:items-center">
+          <!-- Placeholder for image -->
+          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center">
+            <span class="text-gray-400">Image</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between p-4 border">
+        <div>
+          <h2 class="font-bold">Judul Buku</h2>
+          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
+          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
+        </div>
+        <div class="mt-4 sm:mt-0 sm:flex sm:items-center">
+          <!-- Placeholder for image -->
+          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center">
+            <span class="text-gray-400">Image</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between p-4 border">
+        <div>
+          <h2 class="font-bold">Judul Buku</h2>
+          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
+          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
+        </div>
+        <div class="mt-4 sm:mt-0 sm:flex sm:items-center">
+          <!-- Placeholder for image -->
+          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center">
+            <span class="text-gray-400">Image</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Repeat for more items -->
+      <!-- ... -->
+    </div>
+  </div>
+
+  <!-- Content for 'Sudah Dipinjam' -->
+  <div id="sudah-dipinjam" class="tab-content mt-4 hidden">
+    <!-- Similar structure to 'Sedang Dipinjam' -->
+    <div class="flex flex-col space-y-4">
+    <!-- ... -->
+       <!-- Individual item -->
+       <div class="flex flex-col sm:flex-row justify-between p-4 border">
+        <div>
+          <h2 class="font-bold">Judul Buku</h2>
+          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
+          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
+        </div>
+        <div class="mt-4 sm:mt-0 sm:flex sm:items-center">
+          <!-- Placeholder for image -->
+          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center">
+            <span class="text-gray-400">Image</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between p-4 border">
+        <div>
+          <h2 class="font-bold">Judul Buku</h2>
+          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
+          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
+        </div>
+        <div class="mt-4 sm:mt-0 sm:flex sm:items-center">
+          <!-- Placeholder for image -->
+          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center">
+            <span class="text-gray-400">Image</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between p-4 border">
+        <div>
+          <h2 class="font-bold">Judul Buku</h2>
+          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
+          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
+        </div>
+        <div class="mt-4 sm:mt-0 sm:flex sm:items-center">
+          <!-- Placeholder for image -->
+          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center">
+            <span class="text-gray-400">Image</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between p-4 border">
+        <div>
+          <h2 class="font-bold">Judul Buku</h2>
+          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
+          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
+        </div>
+        <div class="mt-4 sm:mt-0 sm:flex sm:items-center">
+          <!-- Placeholder for image -->
+          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center">
+            <span class="text-gray-400">Image</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between p-4 border">
+        <div>
+          <h2 class="font-bold">Judul Buku</h2>
+          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
+          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
+        </div>
+        <div class="mt-4 sm:mt-0 sm:flex sm:items-center">
+          <!-- Placeholder for image -->
+          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center">
+            <span class="text-gray-400">Image</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content for 'Reservasi' -->
+  <div id="reservasi" class="tab-content mt-4 hidden">
+    <!-- Similar structure to 'Sedang Dipinjam' -->
+    <!-- ... -->
+    <div class="flex flex-col space-y-4">
+        <!-- ... -->
+           <!-- Individual item -->
+           <div class="flex flex-col sm:flex-row justify-between p-4 border">
+            <div>
+              <h2 class="font-bold">Judul Buku</h2>
+              <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
+              <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
+            </div>
+            <div class="mt-4 sm:mt-0 sm:flex sm:items-center">
+              <!-- Placeholder for image -->
+              <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center">
+                <span class="text-gray-400">Image</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row justify-between p-4 border">
+            <div>
+              <h2 class="font-bold">Judul Buku</h2>
+              <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
+              <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
+            </div>
+            <div class="mt-4 sm:mt-0 sm:flex sm:items-center">
+              <!-- Placeholder for image -->
+              <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center">
+                <span class="text-gray-400">Image</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row justify-between p-4 border">
+            <div>
+              <h2 class="font-bold">Judul Buku</h2>
+              <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
+              <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
+            </div>
+            <div class="mt-4 sm:mt-0 sm:flex sm:items-center">
+              <!-- Placeholder for image -->
+              <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center">
+                <span class="text-gray-400">Image</span>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+
+<script>
+  // JS untuk tab-switching
+  document.addEventListener('DOMContentLoaded', function() {
+    var tabs = document.querySelectorAll('.tab');
+    var contents = document.querySelectorAll('.tab-content');
+  
+    tabs.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        var target = document.querySelector(tab.getAttribute('data-target'));
+        
+        // Sembunyikan semua konten dan hapus kelas aktif dari semua tab
+        contents.forEach(function(content) { content.classList.add('hidden'); });
+        tabs.forEach(function(t) { t.classList.remove('border-blue-600', 'text-blue-600','border-b-2'); t.classList.add('text-gray-600'); });
+        
+        // Tampilkan konten yang sesuai dengan tab yang diklik dan tambahkan kelas aktif
+        target.classList.remove('hidden');
+        tab.classList.remove('text-gray-600', 'hover:text-blue-600', 'hover:border-blue-600');
+                    tab.classList.add('border-b-2', 'border-blue-600', 'text-blue-600');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
