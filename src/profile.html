@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>User Profile</title>
+</head>
+<body class="bg-gray-200 h-screen flex items-center justify-center">
+
+    <!-- Container Utama -->
+    <div class="bg-white p-8 rounded shadow-md mx-auto h-1/2 w-1/2 flex flex-col justify-self-center items-center relative">
+
+        <!-- Profile Image -->
+        <div class="w-10 rounded-full place-self-center">
+            <img src="../public/assets/diva.jpg" alt="Profile Image" class="w-20 h-10 rounded-full mb-4 ">
+        </div>
+
+        <!-- Nama User -->
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">Nama User</h2>
+
+        <!-- Placeholder sebelah kanan -->
+        <div class="grid grid-cols-2 gap-4 mb-4">
+            <p class="text-gray-600">Email:</p>
+            <p class="text-gray-600 text-right">[Email User]</p>
+
+            <p class="text-gray-600">Tanggal Lahir:</p>
+            <p class="text-gray-600 text-right">[Tanggal Lahir User]</p>
+        </div>
+
+        <!-- Tombol Edit Profile -->
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue mx-24 mt-4">
+            Edit Profile
+        </button>
+
+        <!-- Tombol Ke Halaman Keranjang -->
+        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 focus:outline-none focus:shadow-outline-green absolute left-0 bottom-0 mb-4 ml-4">
+            Ke Halaman Keranjang
+        </button>
+
+        <!-- Tombol Logout -->
+        <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 focus:outline-none focus:shadow-outline-red absolute right-0 bottom-0 mb-4 mr-4">
+            Logout
+        </button>
+
+    </div>
+
+</body>
+</html>

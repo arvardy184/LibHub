@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-200 h-screen flex items-center justify-center">
+
+    <!-- Container Utama -->
+    <div class="p-4 max-w-xl mx-auto mt-16 w-3/4 bg-white shadow-lg rounded-lg overflow-hidden">
+
+        <!-- Judul dan Jumlah Item -->
+        <div class="flex items-center justify-between px-4 py-3 bg-gray-200">
+            <h1 class="text-lg font-bold">Keranjang Saya</h1>
+            <span class="text-gray-600">(3 items)</span>
+        </div>
+
+        <!-- Detail Buku Pertama -->
+        <div class="p-4 flex items-center border-b">
+            <!-- Gambar Buku -->
+            <img class="h-16 w-16 object-contain rounded-lg mr-4" src="https://picsum.photos/200/200" alt="Product">
+
+            <!-- Detail Buku -->
+            <div class="flex-1">
+                <h2 class="text-lg font-bold">Product Title</h2>
+                <p class="text-gray-600">Deskripsi singkat buku.</p>
+                <div class="flex items-center mt-2">
+                    <span class="text-gray-600">Rating: 4.5</span>
+                    <span class="ml-4 text-gray-600">Stok: 10</span>
+                </div>
+            </div>
+
+            <!-- Tombol Checkbox dan Hapus -->
+            <div class="flex flex-col items-end">
+                <input type="checkbox" class="text-gray-600 mb-2">
+                <button class="text-gray-600 hover:text-red-500">
+                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M19 13H5v-2h14v2z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Detail Buku Kedua -->
+        <div class="p-4 flex items-center border-b">
+            <!-- Gambar Buku -->
+            <img class="h-16 w-16 object-contain rounded-lg mr-4" src="https://picsum.photos/200/200" alt="Product">
+
+            <!-- Detail Buku -->
+            <div class="flex-1">
+                <h2 class="text-lg font-bold">Product Title</h2>
+                <p class="text-gray-600">Deskripsi singkat buku.</p>
+                <div class="flex items-center mt-2">
+                    <span class="text-gray-600">Rating: 4.5</span>
+                    <span class="ml-4 text-gray-600">Stok: 10</span>
+                </div>
+            </div>
+
+            <!-- Tombol Checkbox dan Hapus -->
+            <div class="flex flex-col items-end">
+                <input type="checkbox" class="text-gray-600 mb-2">
+                <button class="text-gray-600 hover:text-red-500">
+                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M19 13H5v-2h14v2z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Duplikat struktur yang sama untuk buku kedua -->
+
+        <!-- Detail Buku Ketiga -->
+        <div class="p-4 flex items-center border-b">
+            <!-- Gambar Buku -->
+            <img class="h-16 w-16 object-contain rounded-lg mr-4" src="https://picsum.photos/200/200" alt="Product">
+
+            <!-- Detail Buku -->
+            <div class="flex-1">
+                <h2 class="text-lg font-bold">Product Title</h2>
+                <p class="text-gray-600">Deskripsi singkat buku.</p>
+                <div class="flex items-center mt-2">
+                    <span class="text-gray-600">Rating: 4.5</span>
+                    <span class="ml-4 text-gray-600">Stok: 10</span>
+                </div>
+            </div>
+
+            <!-- Tombol Checkbox dan Hapus -->
+            <div class="flex flex-col items-end">
+                <input type="checkbox" class="text-gray-600 mb-2">
+                <button class="text-gray-600 hover:text-red-500">
+                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M19 13H5v-2h14v2z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Duplikat struktur yang sama untuk buku ketiga -->
+
+        <!-- Tombol Konfirmasi Peminjaman -->
+        <div class="px-4 py-3 bg-gray-200">
+            <button class="block w-full mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                Konfirmasi Peminjaman
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
