@@ -122,7 +122,7 @@ const resultContainer = document.getElementById("result");
                 </div>
                 <div class="flex flex-row justify-between text-white">
                     <div class="rounded-lg self-start w-full bg-blue-400">Rating: ${book.rating}</div>
-                    <div class="rounded-lg self-end w-full bg-yellow-400">Stok: ${book.stok}</div>
+                    <div class="rounded-lg self-end w-full bg-red-400">Stok: ${book.stok}</div>
                 </div>
               </div>
              </button>
@@ -152,7 +152,7 @@ const resultContainer = document.getElementById("result");
                 </div>
                 <div class="flex flex-row justify-between text-white">
                     <div class="rounded-lg self-start w-full bg-blue-400">Rating: ${book.rating}</div>
-                    <div class="rounded-lg self-end w-full bg-yellow-400">Stok: ${book.stok}</div>
+                    <div class="rounded-lg self-end w-full bg-green-400">Stok: ${book.stok}</div>
                 </div>
               </div>
              </button>
@@ -166,7 +166,8 @@ const resultContainer = document.getElementById("result");
              </div>
            </div>
         `
-        ://Jika blm login
+        ://Jika blm login stok 0
+        stok==0?
         `
            <div class="flex flex-row  border-none">
             <button id="all" onclick="menuBuku('${book.name}')" class="border-none transition-all scales relative gap-2 max-w-xl">
@@ -182,7 +183,7 @@ const resultContainer = document.getElementById("result");
                 </div>
                 <div class="flex flex-row justify-between text-white">
                     <div class="rounded-lg self-start w-full bg-blue-400">Rating: ${book.rating}</div>
-                    <div class="rounded-lg self-end w-full bg-yellow-400">Stok: ${book.stok}</div>
+                    <div class="rounded-lg self-end w-full bg-red-400">Stok: ${book.stok}</div>
                 </div>
               </div>
              </button>
@@ -194,6 +195,34 @@ const resultContainer = document.getElementById("result");
              
            </div>
         `
+        : //blm login stok ada
+        `
+        <div class="flex flex-row  border-none">
+         <button id="all" onclick="menuBuku('${book.name}')" class="border-none transition-all scales relative gap-2 max-w-xl">
+           <img src="${book.imageLink}" alt="${book.name}" class="h-auto object-cover rounded-lg shadow-md w-60 mb-2">
+           <div class="w-full container bg-opacity-100 place-self-center">
+             <div class="bg-black text-white rounded-lg p-1">
+               <h3 class="text-lg font-semibold justify-center items-center flex">${book.name}</h3>
+             </div>
+             <div id="komp" class="mt-2 bg-white p-4 rounded-lg shadow-lg mb-2 h-fit w-full">
+               
+               <p class="text-gray-600">Penulis: ${book.author}</p>
+               <p class="text-gray-600">Tahun Terbit: ${book.year}</p>
+             </div>
+             <div class="flex flex-row justify-between text-white">
+                 <div class="rounded-lg self-start w-full bg-blue-400">Rating: ${book.rating}</div>
+                 <div class="rounded-lg self-end w-full bg-green-400">Stok: ${book.stok}</div>
+             </div>
+           </div>
+          </button>
+          <div class="flex flex-col place-self-center ml-2">
+          <div class="bg-white p-4 rounded-lg shadow-lg mb-2 h-fit w-full">
+          <p class="text-gray-600">ISBN: ${book.isbn}</p>
+          <p class="text-gray-600">Jumlah Halaman: ${book.halaman}</p>
+          <p class="text-gray-600">Bahasa: ${book.bahasa}</p>
+          
+        </div>
+     `
         ;
         resultContainer.appendChild(bookCard);
       });
