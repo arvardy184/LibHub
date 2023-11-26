@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="../../dist/output.css"/>
     <!-- <link rel="stylesheet" href="./stylelivechat.css"/> -->
-    <title>Document</title>
+    <title>FAQ/title>
 </head>
 <style>
   <!--css note-->
@@ -15,6 +15,34 @@
     height: fit-content;
     
     }
+    @media (max-width: 300px){
+    #isi {
+    flex-direction: column;
+    }
+    #accordion-collapse{
+      padding-top: 50px;
+    }
+    #isiweb{
+      padding-top: 186px;
+    }
+    #search{
+      width: 80vw;
+    }
+    #isikonten{
+      scale:80%;
+    }
+     #all{
+      display: block;
+    }
+    #menu{
+      flex-direction: column;
+    }
+    #komp{
+      width:240px
+    }
+    
+  
+  }
     @media(max-width:500px){
         #pp{
           scale: 80%;
@@ -92,7 +120,51 @@
     }
 </style>
 <body class="bg-cover bg-center bg-fixed flex">
-  
+  <div id="header" class="bg-base-100 flex">
+    <div class="navbar bg-base-100 w-full fixed z-20">
+      <div id="isi" class="w-full gap-3">
+        <div class="flex-1">
+          <a onclick="window.location.href='index.html'" class="btn btn-ghost normal-case text-xl scales">LibHub</a>
+        </div>
+        
+        
+        <div id="profil" class="dropdown dropdown-end">
+          <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+            <div class="w-10 rounded-full">
+              <img src="../public/assets/diva.jpg" />
+            </div>
+          </label>
+          <ul id="drop" tabindex="0" class="mt-1  z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-36">
+            <li>
+              <a href="./profile.html" class="justify-between">
+                Profile
+              </a>
+            </li>
+            <li onclick="window.location.href='faq.html'"><a>FAQ</a></li>
+            <li><a href="./riwayat.html">Riwayat</a></li>
+            <li><a onclick="localStorage.setItem('login',false); 
+              window.location.href='index.html';">Logout</a></li>
+          </ul>
+        </div>
+        <div id="log" class="hidden">
+          <button id="" onclick="window.location.href='login.html'" class="scales transition-all rounded-3xl p-3 bg-blue-400 text-black btn btn-ghost">
+            Login
+            
+            </button>
+            <button id="" onclick="window.location.href='register.html'" class="scales transition-all rounded-3xl p-3 bg-blue-400 text-black btn btn-ghost">
+              Register
+              
+              </button>
+        
+        </div>
+      </div>
+     
+        
+        
+
+    
+    </div>
+  </div>
 <div id="accordion-collapse" data-accordion="collapse" class="z-10 mx-auto w-full">
     <h2 id="accordion-collapse-heading-1">
       <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
@@ -117,7 +189,7 @@
       </button>
     </h2>
     <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-      <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+      <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
         <p class="mb-2 text-gray-500 dark:text-gray-400">Ya bayar lah.</p>
         <p class="text-gray-500 dark:text-gray-400">Ya kali kaga.</p>
       </div>
@@ -131,7 +203,7 @@
       </button>
     </h2>
     <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
-      <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+      <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
         <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
         <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
         <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>

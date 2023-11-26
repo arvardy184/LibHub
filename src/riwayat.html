@@ -8,12 +8,67 @@
   <title>Halaman Riwayat Peminjaman</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Taruh kustomisasi style tambahan di sini */
+   @media(max-height:400px){
+  
+        #gerakmang{
+            scale: 80%
+        }
+    }
+    @media(max-height:300px){
+
+    #gerakmang{
+            scale: 70%
+        }
+    }
   </style>
 </head>
 <body>
+  <div id="header" class="bg-base-100 flex">
+    <div class="navbar bg-base-100 w-full fixed z-20">
+      <div id="isi" class="w-full gap-3">
+        <div class="flex-1">
+          <a onclick="window.location.href='index.html'" class="btn btn-ghost normal-case text-xl scales">LibHub</a>
+        </div>
+        
+        
+        <div id="profil" class="dropdown dropdown-end">
+          <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+            <div class="w-10 rounded-full">
+              <img src="../public/assets/diva.jpg" />
+            </div>
+          </label>
+          <ul id="drop" tabindex="0" class="mt-1  z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-36">
+            <li>
+              <a href="./profile.html" class="justify-between">
+                Profile
+              </a>
+            </li>
+            <li onclick="window.location.href='faq.html'"><a>FAQ</a></li>
+            <li><a href="./riwayat.html">Riwayat</a></li>
+            <li><a onclick="localStorage.setItem('login',false); 
+              window.location.href='index.html';">Logout</a></li>
+          </ul>
+        </div>
+        <div id="log" class="hidden">
+          <button id="" onclick="window.location.href='login.html'" class="scales transition-all rounded-3xl p-3 bg-blue-400 text-black btn btn-ghost">
+            Login
+            
+            </button>
+            <button id="" onclick="window.location.href='register.html'" class="scales transition-all rounded-3xl p-3 bg-blue-400 text-black btn btn-ghost">
+              Register
+              
+              </button>
+        
+        </div>
+      </div>
+     
+        
+        
 
-<div class="container mx-auto p-4 bg-slate-800">
+    
+    </div>
+  </div>
+<div class="container mx-auto p-4 bg-slate-800 mt-20">
   <!-- Tab bar -->
   <div class="flex flex-wrap border-b">
     <button class="tab w-full sm:w-auto py-2 px-4 text-blue-600 border-b-2 border-blue-600 font-medium" data-target="#sedang-dipinjam">Sedang Dipinjam</button>
@@ -24,94 +79,10 @@
   <!-- Content for 'Sedang Dipinjam' -->
   <div id="sedang-dipinjam" class="tab-content mt-4">
     <!-- List container -->
-    <div class="flex flex-col space-y-4">
+    <div id="isisedang" class="flex flex-col space-y-4">
       <!-- Individual item -->
-      <div class="flex flex-col sm:flex-row justify-between p-4 border">
-        <div>
-          <h2 class="font-bold">Judul Buku</h2>
-          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
-          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
-        </div>
-        <div class=" flex flex-col justify-between mt-4 sm:mt-0  sm:items-end items-center ">
-          <!-- Placeholder for image -->
-          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center mb-4 mx-6">
-            <span class="text-gray-400">Image</span>
-          </div>
-           <!-- Button to return the book -->
-           <button class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none w-full sm:w-auto">
-          Kembalikan Buku
-        </button>
-        </div>
-      </div>
-      <div class="flex flex-col sm:flex-row justify-between p-4 border">
-        <div>
-          <h2 class="font-bold">Judul Buku</h2>
-          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
-          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
-        </div>
-        <div class=" flex flex-col justify-between mt-4 sm:mt-0  sm:items-end items-center ">
-          <!-- Placeholder for image -->
-          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center mb-4 mx-6">
-            <span class="text-gray-400">Image</span>
-          </div>
-           <!-- Button to return the book -->
-           <button class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none w-full sm:w-auto">
-          Kembalikan Buku
-        </button>
-        </div>
-      </div>
-
-      <div class="flex flex-col sm:flex-row justify-between p-4 border">
-        <div>
-          <h2 class="font-bold">Judul Buku</h2>
-          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
-          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
-        </div>
-        <div class=" flex flex-col justify-between mt-4 sm:mt-0  sm:items-end items-center ">
-          <!-- Placeholder for image -->
-          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center mb-4 mx-6">
-            <span class="text-gray-400">Image</span>
-          </div>
-           <!-- Button to return the book -->
-           <button class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none w-full sm:w-auto">
-          Kembalikan Buku
-        </button>
-        </div>
-      </div>
-      <div class="flex flex-col sm:flex-row justify-between p-4 border">
-        <div>
-          <h2 class="font-bold">Judul Buku</h2>
-          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
-          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
-        </div>
-        <div class=" flex flex-col justify-between mt-4 sm:mt-0  sm:items-end items-center ">
-          <!-- Placeholder for image -->
-          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center mb-4 mx-6">
-            <span class="text-gray-400">Image</span>
-          </div>
-           <!-- Button to return the book -->
-           <button class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none w-full sm:w-auto">
-          Kembalikan Buku
-        </button>
-        </div>
-      </div>
-      <div class="flex flex-col sm:flex-row justify-between p-4 border">
-        <div>
-          <h2 class="font-bold">Judul Buku</h2>
-          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
-          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
-        </div>
-        <div class=" flex flex-col justify-between mt-4 sm:mt-0  sm:items-end items-center ">
-          <!-- Placeholder for image -->
-          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center mb-4 mx-6">
-            <span class="text-gray-400">Image</span>
-          </div>
-           <!-- Button to return the book -->
-           <button class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none w-full sm:w-auto">
-          Kembalikan Buku
-        </button>
-        </div>
-      </div>
+      
+      
       
       <!-- Repeat for more items -->
       <!-- ... -->
@@ -121,94 +92,10 @@
   <!-- Content for 'Sudah Dipinjam' -->
   <div id="sudah-dipinjam" class="tab-content mt-4 hidden">
     <!-- Similar structure to 'Sedang Dipinjam' -->
-    <div class="flex flex-col space-y-4">
+    <div id="sudahpinjam" class="flex flex-col space-y-4">
     <!-- ... -->
-       <!-- Individual item -->
-       <div class="flex flex-col sm:flex-row justify-between p-4 border">
-        <div>
-          <h2 class="font-bold">Judul Buku</h2>
-          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
-          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
-        </div>
-        <div class=" flex flex-col justify-between mt-4 sm:mt-0  sm:items-end items-center ">
-          <!-- Placeholder for image -->
-          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center mb-4 mx-6">
-            <span class="text-gray-400">Image</span>
-          </div>
-           <!-- Button to return the book -->
-           <button class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none w-full sm:w-auto">
-          Kembalikan Buku
-        </button>
-        </div>
-      </div>
-      <div class="flex flex-col sm:flex-row justify-between p-4 border">
-        <div>
-          <h2 class="font-bold">Judul Buku</h2>
-          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
-          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
-        </div>
-        <div class=" flex flex-col justify-between mt-4 sm:mt-0  sm:items-end items-center ">
-          <!-- Placeholder for image -->
-          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center mb-4 mx-6">
-            <span class="text-gray-400">Image</span>
-          </div>
-           <!-- Button to return the book -->
-           <button class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none w-full sm:w-auto">
-          Kembalikan Buku
-        </button>
-        </div>
-      </div>
-      <div class="flex flex-col sm:flex-row justify-between p-4 border">
-        <div>
-          <h2 class="font-bold">Judul Buku</h2>
-          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
-          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
-        </div>
-        <div class=" flex flex-col justify-between mt-4 sm:mt-0  sm:items-end items-center ">
-          <!-- Placeholder for image -->
-          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center mb-4 mx-6">
-            <span class="text-gray-400">Image</span>
-          </div>
-           <!-- Button to return the book -->
-           <button class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none w-full sm:w-auto">
-          Kembalikan Buku
-        </button>
-        </div>
-      </div>
-      <div class="flex flex-col sm:flex-row justify-between p-4 border">
-        <div>
-          <h2 class="font-bold">Judul Buku</h2>
-          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
-          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
-        </div>
-        <div class=" flex flex-col justify-between mt-4 sm:mt-0  sm:items-end items-center ">
-          <!-- Placeholder for image -->
-          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center mb-4 mx-6">
-            <span class="text-gray-400">Image</span>
-          </div>
-           <!-- Button to return the book -->
-           <button class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none w-full sm:w-auto">
-          Kembalikan Buku
-        </button>
-        </div>
-      </div>
-      <div class="flex flex-col sm:flex-row justify-between p-4 border">
-        <div>
-          <h2 class="font-bold">Judul Buku</h2>
-          <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
-          <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
-        </div>
-        <div class=" flex flex-col justify-between mt-4 sm:mt-0  sm:items-end items-center ">
-          <!-- Placeholder for image -->
-          <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center mb-4 mx-6">
-            <span class="text-gray-400">Image</span>
-          </div>
-           <!-- Button to return the book -->
-           <button class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none w-full sm:w-auto">
-          Kembalikan Buku
-        </button>
-        </div>
-      </div>
+       
+    
     </div>
   </div>
 
@@ -216,51 +103,43 @@
   <div id="reservasi" class="tab-content mt-4 hidden">
     <!-- Similar structure to 'Sedang Dipinjam' -->
     <!-- ... -->
-    <div class="flex flex-col space-y-4">
-        <!-- ... -->
-           <!-- Individual item -->
-           <div class="flex flex-col sm:flex-row justify-between p-4 border">
-            <div>
-              <h2 class="font-bold">Judul Buku</h2>
-              <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
-              <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
-            </div>
-            <div class="mt-4 sm:mt-0 sm:flex sm:items-center">
-              <!-- Placeholder for image -->
-              <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center">
-                <span class="text-gray-400">Image</span>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row justify-between p-4 border">
-            <div>
-              <h2 class="font-bold">Judul Buku</h2>
-              <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
-              <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
-            </div>
-            <div class="mt-4 sm:mt-0 sm:flex sm:items-center">
-              <!-- Placeholder for image -->
-              <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center">
-                <span class="text-gray-400">Image</span>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row justify-between p-4 border">
-            <div>
-              <h2 class="font-bold">Judul Buku</h2>
-              <p>Tanggal Dipinjam: <span class="text-gray-600">29/10/2024</span></p>
-              <p>Tanggal Pengembalian: <span class="text-gray-600">18/11/2024</span></p>
-            </div>
-            <div class="mt-4 sm:mt-0 sm:flex sm:items-center">
-              <!-- Placeholder for image -->
-              <div class="w-24 h-24 border-2 border-gray-300 flex items-center justify-center">
-                <span class="text-gray-400">Image</span>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div id="reservasiisi" class="flex flex-col space-y-4">
+       
+          
   </div>
 </div>
+<div id="berhasil" class="overflow-auto flex p-2 h-screen w-screen fixed left-0 top-0 ml-0 mr-0 mb-0 mt-0 bg-fixed bg-black bg-opacity-50 hidden">
+  <div id="gerakmang" class="bg-white w-fit rounded-3xl shadow-lg my-auto mx-auto max-w-xs selection:fixed">
+    <div class="border-b-2 spacing-1 px-4 py-2">
+      <h3 class="text-black text-center">Ingin Mengembalikan buku?</h3>
+    </div>
+    <div class="text-center p-4">
+      <p>Apa kamu yakin ingin mengembalikan buku ini?</p>
+    </div>
+    <div class="p-4 flex">
+      <button id="okff" type="click" class="items-center w-full mx-auto my-auto bg-blue-500 text-white p-2 rounded-3xl hover:bg-green-700 transition">Iya </button>
+      <button id="ok" onclick="window.location.reload(true)" type="click" class="items-center w-full mx-auto my-auto bg-red-500 text-white p-2 rounded-3xl hover:bg-green-700 transition">Tidak</button>
+    </div>
+  </div>
+</div>
+
+<div id="yakin" class="overflow-auto flex p-2 h-screen w-screen fixed left-0 top-0 ml-0 mr-0 mb-0 mt-0 bg-fixed bg-black bg-opacity-50 hidden">
+  <div id="gerakmang" class="bg-white w-fit rounded-3xl shadow-lg my-auto mx-auto max-w-xs selection:fixed">
+    <div class="border-b-2 spacing-1 px-4 py-2">
+      <h3 class="text-black text-center">Ingin Membatalkan reservasi?</h3>
+    </div>
+    <div class="text-center p-4">
+      <p>Apa kamu yakin ingin membatalkan reservasi buku ini?</p>
+    </div>
+    <div class="p-4 flex">
+      <button id="okf" type="click" class="items-center w-full mx-auto my-auto bg-blue-500 text-white p-2 rounded-3xl hover:bg-green-700 transition">Iya </button>
+      <button id="oka" onclick="document.getElementById('yakin').classList.add('hidden')" type="click" class="items-center w-full mx-auto my-auto bg-red-500 text-white p-2 rounded-3xl hover:bg-green-700 transition">Tidak</button>
+    </div>
+  </div>
+</div>
+
+</body>
+
 
 <script>
   // JS untuk tab-switching
@@ -284,6 +163,7 @@
     });
   });
 </script>
+<script src="./riwayat.js"></script>
 
 </body>
 </html>

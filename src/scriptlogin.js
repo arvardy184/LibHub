@@ -1,9 +1,9 @@
-const nig = document.getElementById('nig')
+const isicaptcha = document.getElementById('isicaptcha')
 history.pushState(null, null, window.location.href);
 function backdulu(){
     
-    nig.classList.remove('munculalus')
-    nig.classList.add('ilangalus')
+    isicaptcha.classList.remove('munculalus')
+    isicaptcha.classList.add('ilangalus')
     setTimeout(function() {
         captchakun.classList.add('hidden')
         refreshCaptcha();
@@ -29,14 +29,14 @@ const uwah = document.getElementById('uwah')
 
 function active(){
     
-    nig.classList.add('munculalus')
-    nig.classList.remove('ilangalus')
+    isicaptcha.classList.add('munculalus')
+    isicaptcha.classList.remove('ilangalus')
     
     if(uwah.classList.contains("bg-red-500")){
     captchakun.classList.remove('hidden');
     }
     else
-    alert("KAMU UDAH ISI CAPTCHA SYG");
+    alert("Kamu sudah mengisi captcha!");
     
 }
 const login = document.getElementById('salah')
@@ -74,7 +74,7 @@ form.addEventListener('submit', function (e) {
                 bener.style.display ="none"
                 benar.classList.remove('menghilang')
                 benar.classList.add('opacitykan')
-                window.location.href="indexfauzan.html";
+                window.location.href="index.html";
             }, 3200);
         }
         else{
@@ -143,7 +143,7 @@ function cekcaptcha(){
     
     if(captchaElementInput==captchaElement.innerText.trim()){
         
-        message.innerText="Captchanya bener syg <3"
+        message.innerText="Captcha benar"
         message.classList.add('bg-green-600')
         message.style.display="block"
         setTimeout(function() {
@@ -159,7 +159,7 @@ function cekcaptcha(){
         },1500);
     }
     else if(captchaElementInput.trim()==''||captchaElementInput=='Masukkan di sini!'){
-        message.innerText="Jangan dikosongkan laa"
+        message.innerText="Jangan dikosongkan"
         message.style.display="block"
         setTimeout(function() {
         message.classList.remove('opacitykan')
@@ -170,7 +170,7 @@ function cekcaptcha(){
         },1500);
     }
     else{
-        message.innerText="Masukkin yg bener ahh <3"
+        message.innerText="Masukkan yang benar!"
         message.classList.add('bg-red-400')
         message.style.display="block"
         setTimeout(function() {

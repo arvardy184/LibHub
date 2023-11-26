@@ -12,11 +12,11 @@ window.addEventListener("resize", function() {
 });
 const contoh = document.getElementById('pk')
 
-const nig = document.getElementById('nig')
+const isicaptcha = document.getElementById('isicaptcha')
 function backdulu(){
     
-    nig.classList.remove('munculalus')
-    nig.classList.add('ilangalus')
+    isicaptcha.classList.remove('munculalus')
+    isicaptcha.classList.add('ilangalus')
     setTimeout(function() {
         captchakun.classList.add('hidden')
         refreshCaptcha();
@@ -34,14 +34,14 @@ var message = document.getElementById('message');
 message.style.display="none"
 function active(){
     
-  nig.classList.add('munculalus')
-  nig.classList.remove('ilangalus')
+  isicaptcha.classList.add('munculalus')
+  isicaptcha.classList.remove('ilangalus')
   
   if(uwah.classList.contains("bg-red-500")){
   captchakun.classList.remove('hidden');
   }
   else
-  alert("KAMU UDAH ISI CAPTCHA SYG");
+  alert("Kamu sudah mengisi captcha!");
   
 }
 const uwah = document.getElementById('uwah')
@@ -181,7 +181,7 @@ function cekcaptcha(){
     
     if(captchaElementInput==captchaElement.innerText.trim()){
         
-        message.innerText="Captchanya bener syg <3"
+        message.innerText="Captcha benar"
         message.classList.add('bg-green-600')
         message.style.display="block"
         setTimeout(function() {
@@ -199,7 +199,7 @@ function cekcaptcha(){
         },1500);
     }
     else if(captchaElementInput.trim()==''||captchaElementInput=='Masukkan di sini!'){
-        message.innerText="Jangan dikosongkan laa"
+        message.innerText="Jangan dikosongkan"
         message.style.display="block"
         refreshCaptcha();
         setTimeout(function() {
@@ -212,7 +212,7 @@ function cekcaptcha(){
     }
     else{
         refreshCaptcha();
-        message.innerText="Masukkin yg bener ahh <3"
+        message.innerText="Masukkan yang benar!"
         message.classList.add('bg-red-400')
         message.style.display="block"
         setTimeout(function() {
