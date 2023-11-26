@@ -12,12 +12,12 @@
     <div class="p-4 max-w-xl mx-auto mt-16 w-3/4 bg-white shadow-lg rounded-lg overflow-hidden">
 
         <!-- Judul dan Jumlah Item -->
-        <div class="flex items-center justify-between px-4 py-3 bg-gray-200">
+        <div id="isi" class="flex items-center justify-between px-4 py-3 bg-gray-200">
             <h1 class="text-lg font-bold">Keranjang Saya</h1>
-            <span class="text-gray-600">(3 items)</span>
+            
         </div>
-
-        <!-- Detail Buku Pertama -->
+        <div id="detilbuku">
+             <!-- Detail Buku Pertama -->
         <div class="p-4 flex items-center border-b">
             <!-- Gambar Buku -->
             <img class="h-16 w-16 object-contain rounded-lg mr-4" src="https://picsum.photos/200/200" alt="Product">
@@ -95,6 +95,10 @@
                 </button>
             </div>
         </div>
+
+        </div>
+
+       
         <!-- Duplikat struktur yang sama untuk buku ketiga -->
 
         <!-- Tombol Konfirmasi Peminjaman -->
@@ -106,4 +110,5 @@
     </div>
 
 </body>
+<script src="./incart.js"></script>
 </html>
