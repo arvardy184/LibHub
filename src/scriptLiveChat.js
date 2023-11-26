@@ -17,10 +17,10 @@ function clicktemp(button){
     setTimeout(() => {
         var elemenBaru = document.createElement("span");
         elemenBaru.className = "bg-gray-800 text-white w-fit maxw2 p-4 rounded-3xl self-start";
-        var isiText = (button.id=="buttA")?"Libhub adalah Aplikasi Perpustakaan berbasis Digital":
-                      (button.id=="buttB")?"Jelas Berbayar":
-                      (button.id=="buttC")?"Tinggal klik klik saja di hp atau laptop mu":
-                      (button.id=="buttD")?"Dilempar":
+        var isiText = (button.id=="buttA")?"Denda per hari: [Rp. 5000], Denda pelanggaran: [Rp. 500], Total yang harus dibayarkan / hari: [Rp. 5500]":
+                      (button.id=="buttB")?"Kalau menghilangkan, mengganti sepenuhnya, kalau rusak membayar denda sesuai kondisi cacat buku":
+                      (button.id=="buttC")?"Akan dialihkan ke menu reservasi, User akan mendapatkan notif ketika stok buku sudah tersedia":
+                      (button.id=="buttD")?"Pengguna hanya boleh meminjam 1 buku dalam satu waktu":
                       (button.id=="buttE")?"Tunggu ya, menghubungkan mu dengan CS...":"";
         var teksElemenBaru = document.createTextNode(isiText);
         elemenBaru.appendChild(teksElemenBaru)
@@ -96,6 +96,24 @@ function kirimpesan(){
     
     
 }
+const login = document.getElementById("log")
+var isLogin=localStorage.getItem("login")
+
+function cekLogin(){
+ 
+    if(isLogin=="true"){
+      console.log(isLogin);
+      document.getElementById("profil").classList.remove("hidden")
+      login.classList.add("hidden")
+      
+    }
+    else{
+      console.log(isLogin);
+      document.getElementById("profil").classList.add("hidden")
+      login.classList.remove("hidden")
+    }
+  }
+  cekLogin()
 function keluarlive(){
     var elemenBaru = document.createElement("span");
     elemenBaru.className = "bg-green-600 text-white w-fit maxw2 p-4 rounded-3xl self-end";

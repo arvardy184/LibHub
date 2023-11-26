@@ -180,7 +180,8 @@ const resultContainer = document.getElementById("result");
         });
       });
     }
-    function ulas(){
+    function ulas(param){
+      document.getElementById('titlenya').innerHTML=param;
       document.getElementById('yakin').classList.remove('hidden')
     }
     function searchBook() {
@@ -442,7 +443,7 @@ menuContainer.scrollTop=0;
     <h3 class="font-semibold flex text-xl text-center justify-center">Stok Buku: ${book.stok}</h3>
     <h3 class="font-semibold flex text-xl text-center justify-center">Rating: ${book.rating}</h3>
     <button onclick="tambahReservasi('${book.name}')" class="place-items-center bg-blue-600 p-2 rounded-2xl scales hover:bg-green-800 transition-all mb-2">Reservasi Buku</button>
-    <button onclick="ulas()" class="place-items-center bg-blue-600 p-2 rounded-2xl scales hover:bg-green-800 transition-all">Ulas Buku</button>
+    <button onclick="ulas('${book.name}')" class="place-items-center bg-blue-600 p-2 rounded-2xl scales hover:bg-green-800 transition-all">Ulas Buku</button>
     </div>
     <div class="bg-black p-4 rounded-lg shadow-lg h-auto">
 
@@ -467,7 +468,7 @@ menuContainer.scrollTop=0;
     <h3 class="font-semibold flex text-xl text-center justify-center">Stok Buku: ${book.stok}</h3>
     <h3 class="font-semibold flex text-xl text-center justify-center">Rating: ${book.rating}</h3>
     <button id="${book.name}" onclick="tambahKeranjang()" class="place-items-center bg-blue-600 p-2 rounded-2xl scales hover:bg-green-800 transition-all mb-2">Tambah Ke Keranjang</button>
-    <button onclick="ulas()" class="place-items-center bg-blue-600 p-2 rounded-2xl scales hover:bg-green-800 transition-all">Ulas Buku</button>
+    <button onclick="ulas('${book.name}')" class="place-items-center bg-blue-600 p-2 rounded-2xl scales hover:bg-green-800 transition-all">Ulas Buku</button>
     </div>
     <div class="bg-black p-4 rounded-lg shadow-lg h-auto">
 

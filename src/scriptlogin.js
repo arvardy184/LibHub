@@ -69,13 +69,13 @@ form.addEventListener('submit', function (e) {
             setTimeout(function() {
                 benar.classList.remove('opacitykan')
                 benar.classList.add('menghilang')
-            }, 3000);
+            }, 1000);
             setTimeout(function() {
                 bener.style.display ="none"
                 benar.classList.remove('menghilang')
                 benar.classList.add('opacitykan')
                 window.location.href="index.html";
-            }, 3200);
+            }, 1200);
         }
         else{
             salah.style.display="block"
@@ -86,12 +86,12 @@ form.addEventListener('submit', function (e) {
             setTimeout(function() {
                 login.classList.remove('opacitykan')
                 login.classList.add('menghilang')
-            }, 3000);
+            }, 1000);
             setTimeout(function() {
                 salah.style.display ="none"
                 login.classList.remove('menghilang')
                 login.classList.add('opacitykan')
-            }, 3200);
+            }, 1200);
         }
     }
     
