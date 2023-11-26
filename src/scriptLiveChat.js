@@ -104,6 +104,8 @@ function cekLogin(){
     if(isLogin=="true"){
       console.log(isLogin);
       document.getElementById("profil").classList.remove("hidden")
+      document.getElementById("belum").classList.add("hidden")
+      document.getElementById("sudah").classList.remove("hidden")
       login.classList.add("hidden")
       
     }
