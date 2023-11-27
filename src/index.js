@@ -359,10 +359,12 @@ const resultContainer = document.getElementById("result");
 function  munculcari(){
   resultContainer.classList.add("hidden")
   populateSelect()
+  document.getElementById('body').classList.add('overflow-hidden')
   pencarian.classList.remove("hidden")
 }
-const pencarian=document.getElementById("pencarian");
+const pencarian=document.getElementById("konfirmkan");
 function hilangkan(){
+  document.getElementById('body').classList.remove('overflow-hidden')
   genreSelect.innerHTML="";
     searchInput.value=""
     year.value=""

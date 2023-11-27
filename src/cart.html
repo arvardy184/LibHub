@@ -33,6 +33,12 @@
             scale: 60%
         }
     }
+    @media(max-height:350px){
+        #snk{
+          scale:70%
+        }
+        
+    }
     
     @media(max-width:500px){
         #konfirm{
@@ -103,7 +109,7 @@
                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                             <label for="terms-checkbox"
                                 class="ms-2 py-8 text-sm font-medium text-white dark:text-gray-300">Saya telah menyetujui <a
-                                    href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Syarat dan Ketentuan</a> yang berlaku.</label>
+                                    href="#" onclick="document.getElementById('wow').classList.remove('hidden')" class="text-blue-600 dark:text-blue-500 hover:underline">Syarat dan Ketentuan</a> yang berlaku.</label>
                         </div>
                         <!-- Confirmation Button -->
                         <button type="submit"
@@ -192,6 +198,24 @@
             </div>
         </div>
     </div>
+    <div id="wow" class=" flex p-2 h-screen w-screen left-0 top-0 ml-0 mr-0 mb-0 mt-0 bg-fixed bg-white bg-opacity-50 fixed z-40 overflow-auto hidden">
+        <div class="container mx-auto p-2 my-auto">
+          <div id="snk" class=" bg-white rounded-3xl shadow-lg my-auto mx-auto max-w-lg selection:fixed">
+            <div class="border-b-2 spacing-1 px-4 py-2">
+              <h3 class="text-black">Baca Syarat dan Ketentuan di Bawah Ini</h3>
+            </div>
+            <div class="p-3 text-j overflow-auto max-h-60">
+              <div class="max-w-xl mx-auto bg-white p-4 shadow-md">
+                <img class="w-full h-auto scale-100" src="../public/assets/snk.jpg" alt="gambar">
+              </div>
+            </div>
+            <div class="p-4 flex">
+              <button id="duar" onclick="document.getElementById('wow').classList.add('hidden')" type="click" class=" w-full items-center mx-auto my-auto bg-blue-500 text-white p-2 hover:bg-green-700 transition rounded-xl max-w-xs">Ok Bang</button>
+            </div> 
+            
+          </div>
+        </div>
+      </div>
     <div id="berhasil" class="overflow-auto flex  p-2 h-screen w-screen fixed left-0 top-0 ml-0 mr-0 mb-0 mt-0 bg-fixed bg-black bg-opacity-50 hidden">
         <div id="gerakmang" class=" bg-white w-fit rounded-3xl shadow-lg my-auto mx-auto max-w-xs selection:fixed kokjauh">
           <div class="border-b-2 spacing-1 px-4 py-2">

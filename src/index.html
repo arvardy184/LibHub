@@ -94,7 +94,7 @@
   }
 </style>
 
-    <body class="font-Jakarta bg-center bg-cover h-fit" style="background-image: url(../public/assets/perpus.jpg);">
+    <body id="body" class="font-Jakarta bg-center bg-cover h-fit" style="background-image: url(../public/assets/perpus.jpg);">
       
       
           <div id="header" class="bg-base-100 flex">
@@ -157,46 +157,49 @@
             
             </div>
           </div>
-         
-          <div id="pencarian" class="bg-black w-full h-full bg-cover fixed bg-opacity-50 z-20 bg-fixed flex flex-col text-white font-bold hidden">
-            <h1 class="place-self-center">Book Search</h1>
-      <div id="cari" class="place-self-center">
-        <label for="search">Search:</label>
-        <input class="p-1 text-center rounded-2xl" type="text" id="searchisi" placeholder="Judul, Author">
-        <button  class="scales bg-blue-500 p-2 rounded-3xl hover:bg-green-700 transition-all" onclick="searchBook()">Search</button>
-        <button  class="scales bg-red-500 p-2 rounded-3xl hover:bg-green-700 transition-all" onclick="hilangkan()">Back</button>
-      </div>
-      <div id="filter" class="place-self-start bg-black p-4 rounded-3xl">
-      
-        <div class="mb-2">
-          <label for="genre">Genre:</label>
-          <select class="p-1 rounded-xl" id="genre">
-            
-          </select>
-        </div>
-        <div class="mb-2">
-          <label for="year">Tahun Terbit:</label>
-          <select class="p-1 rounded-xl" id="year">
-            <option value="">-- Semua Tahun --</option>
-            <option value="baru">Baru (2023)</option>
-            <option value="2015">2015 ke atas</option>
-            <option value="2010">2010 ke atas</option>
-            <option value="dibawah2010">Di Bawah 2010</option>
-          </select>
-        </div>
-        
-        <div>
-          <label for="rating">Rating:</label>
-          <select class="p-1 rounded-xl" id="rating">
-            <option value="">-- Semua Rating --</option>
-            <option value="4">4.0 ke atas</option>
-            <option value="3">3.0 ke atas</option>
-            <option value="bawah3">Di Bawah 3.0</option>
-          </select>
-        </div>
-      </div>
-      <div id="result" class="place-self-center overflow-auto text-black bg-slate-500 p-5 rounded-2xl bg-opacity-50 mt-2 w-full"></div>
+          <div id="konfirmkan" class="bg-black h-full w-full fixed z-20 bg-opacity-80 overflow-auto hidden">
+            <div class="container mx-auto sm:p-10 px-4 mb-10 items-center flex flex-col">
+                <h1 class="place-self-center">Book Search</h1>
+          <div id="cari" class="place-self-center">
+            <label for="search">Search:</label>
+            <input class="p-1 text-center rounded-2xl" type="text" id="searchisi" placeholder="Judul, Author">
+            <button  class="scales bg-blue-500 p-2 rounded-3xl hover:bg-green-700 transition-all text-white" onclick="searchBook()">Search</button>
+            <button  class="scales bg-red-500 p-2 rounded-3xl hover:bg-green-700 transition-all text-white" onclick="hilangkan()">Back</button>
           </div>
+          <div id="filter" class="place-self-start bg-black p-4 rounded-3xl">
+          
+            <div class="mb-2">
+              <label for="genre">Genre:</label>
+              <select class="p-1 rounded-xl" id="genre">
+                
+              </select>
+            </div>
+            <div class="mb-2">
+              <label for="year">Tahun Terbit:</label>
+              <select class="p-1 rounded-xl" id="year">
+                <option value="">-- Semua Tahun --</option>
+                <option value="baru">Baru (2023)</option>
+                <option value="2015">2015 ke atas</option>
+                <option value="2010">2010 ke atas</option>
+                <option value="dibawah2010">Di Bawah 2010</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="rating">Rating:</label>
+              <select class="p-1 rounded-xl" id="rating">
+                <option value="">-- Semua Rating --</option>
+                <option value="4">4.0 ke atas</option>
+                <option value="3">3.0 ke atas</option>
+                <option value="bawah3">Di Bawah 3.0</option>
+              </select>
+            </div>
+          </div>
+          <div id="result" class="place-self-center overflow-auto text-black bg-slate-500 p-5 rounded-2xl bg-opacity-50 mt-2 w-full"></div>
+              
+            </div>
+          </div>
+          
   
     <div class="bg-black h-fit w-full bg-opacity-50 inline-block ">
       <div id="menu"onclick=""class="bg-white w-full h-full bg-cover fixed bg-opacity-50 z-20 bg-fixed hidden flex flex-col">
@@ -304,7 +307,66 @@
 
   </div>
       </div>
-      
+      <div id="wow" class=" flex p-2 h-screen w-screen left-0 top-0 ml-0 mr-0 mb-0 mt-0 bg-fixed bg-white bg-opacity-50 fixed z-40 overflow-auto hidden">
+        <div class="container mx-auto p-2 my-auto">
+          <div id="snk" class=" bg-white rounded-3xl shadow-lg my-auto mx-auto max-w-lg selection:fixed">
+            <div class="border-b-2 spacing-1 px-4 py-2">
+              <h3 class="text-black">Baca Syarat dan Ketentuan di Bawah Ini</h3>
+            </div>
+            <div class="p-3 text-j overflow-auto max-h-60">
+              <div class="max-w-xl mx-auto bg-white p-4 shadow-md">
+                <img class="w-full h-auto scale-100" src="../public/assets/snk.jpg" alt="gambar">
+              </div>
+            </div>
+            <div class="p-4 flex">
+              <button id="duar" onclick="document.getElementById('wow').classList.add('hidden')" type="click" class=" w-full items-center mx-auto my-auto bg-blue-500 text-white p-2 hover:bg-green-700 transition rounded-xl max-w-xs">Ok Bang</button>
+            </div> 
+            
+          </div>
+        </div>
+      </div>
+      <div id="wow2" class=" flex p-2 h-screen w-screen left-0 top-0 ml-0 mr-0 mb-0 mt-0 bg-fixed bg-white bg-opacity-50 fixed z-40 overflow-auto hidden">
+        <div class="container mx-auto p-2 my-auto">
+          <div id="snk" class=" bg-white rounded-3xl shadow-lg my-auto mx-auto max-w-lg selection:fixed">
+            <div class="border-b-2 spacing-1 px-4 py-2 text-center">
+              <h3 class="text-black">Kontak Kami:</h3>
+            </div>
+            <div class="p-3 text-j overflow-auto max-h-60">
+              <div class="max-w-xl mx-auto bg-white p-4 shadow-md text-center font-bold">
+                <p>Email: libhub@library.com
+                 </p>
+                <p> Phone: (123) 8585-2928</p>
+                <p> Fax: (021) 2190345</p>
+              </div>
+            </div>
+            <div class="p-4 flex">
+              <button id="duar" onclick="document.getElementById('wow2').classList.add('hidden')" type="click" class=" w-full items-center mx-auto my-auto bg-blue-500 text-white p-2 hover:bg-green-700 transition rounded-xl max-w-xs">Ok Bang</button>
+            </div> 
+            
+          </div>
+        </div>
+      </div>
+      <div id="wow3" class=" flex p-2 h-screen w-screen left-0 top-0 ml-0 mr-0 mb-0 mt-0 bg-fixed bg-white bg-opacity-50 fixed z-40 overflow-auto hidden">
+        <div class="container mx-auto p-2 my-auto">
+          <div id="snk" class=" bg-white rounded-3xl shadow-lg my-auto mx-auto max-w-lg selection:fixed">
+            <div class="border-b-2 spacing-1 px-4 py-2 text-center">
+              <h3 class="text-black">LibHub Team</h3>
+            </div>
+            <div class="p-3 text-j overflow-auto max-h-60">
+              <div class="max-w-xl mx-auto bg-white p-4 shadow-md text-center font-bold">
+                <p>LibHub adalah aplikasi perpustakaan berbasis digital
+                 </p>
+                <p> Kami hadir untuk memudahkan Anda dalam kegiatan pinjam-meminjam buku</p>
+                <p> Kami Buka 24 Jam</p>
+              </div>
+            </div>
+            <div class="p-4 flex">
+              <button id="duar" onclick="document.getElementById('wow3').classList.add('hidden')" type="click" class=" w-full items-center mx-auto my-auto bg-blue-500 text-white p-2 hover:bg-green-700 transition rounded-xl max-w-xs">Ok Bang</button>
+            </div> 
+            
+          </div>
+        </div>
+      </div>
  
     </body>
 
@@ -328,9 +390,9 @@
 
       <!-- Navigation Links -->
       <div class="flex justify-center mb-4">
-        <a class="mx-2 hover:underline">About Us</a>
-        <a class="mx-2 hover:underline">Contact</a>
-        <a class="mx-2 hover:underline">Terms of Service</a>
+        <a onclick="document.getElementById('wow3').classList.remove('hidden')" class="mx-2 hover:underline cursor-pointer">About Us</a>
+        <a onclick="document.getElementById('wow2').classList.remove('hidden')" class="mx-2 hover:underline cursor-pointer">Contact</a>
+        <a onclick="document.getElementById('wow').classList.remove('hidden')" class="mx-2 hover:underline cursor-pointer">Terms of Service</a>
         <!-- Add more navigation links as needed -->
       </div>
 
