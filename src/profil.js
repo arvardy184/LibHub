@@ -37,5 +37,15 @@ function fetchmain(){
     document.getElementById('lahirisi').innerHTML=c
 }
 fetchmain();
-
+function icon(){
+  var isi=parseInt(localStorage.getItem("isiKeranjang"))
+  if(isi==0){
+    document.getElementById("icon").classList.add("hidden")
+  }
+  else{
+    document.getElementById("icon").innerHTML=isi;
+    document.getElementById("icon").classList.remove("hidden")
+  }
+}
+icon();
   

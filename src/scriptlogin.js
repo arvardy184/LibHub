@@ -1,3 +1,5 @@
+document.getElementById('username').value=""
+document.getElementById('password').value=""
 const isicaptcha = document.getElementById('isicaptcha')
 history.pushState(null, null, window.location.href);
 function backdulu(){
@@ -63,6 +65,8 @@ form.addEventListener('submit', function (e) {
     }
     else{
         if(datausn==("admin") && datapw==("admin123")){
+            document.getElementById('username').value=""
+            document.getElementById('password').value=""
             bener.style.display="block"
             localStorage.setItem("login",true);
             //Menyambungkan login berhasil disini tod
@@ -78,6 +82,8 @@ form.addEventListener('submit', function (e) {
             }, 1200);
         }
         else{
+            document.getElementById('username').value=""
+            document.getElementById('password').value=""
             salah.style.display="block"
             uwah.classList.remove('active')
             uwah.classList.add('bg-red-500')
@@ -105,9 +111,11 @@ function kliklp() {
         putar.classList.add('animate-spin')
     }, 200);
     setTimeout(function()  {
-        window.location.reload(true);
+        document.getElementById('username').value=""
+        document.getElementById('password').value=""
         window.location.href='lupapw.html';
     }, 1000);
+    
 }
 const refresh = document.getElementById('memutar')
 refresh.addEventListener('click',function(){
@@ -192,7 +200,8 @@ function klikds(){
         putar.classList.add('animate-spin')
     }, 200);
     setTimeout(function()  {
-        window.location.reload(true);
+        document.getElementById('username').value=""
+        document.getElementById('password').value=""
         window.location.href='register.html';
     }, 1000);
 }

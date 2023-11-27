@@ -113,10 +113,14 @@
                  Belum punya akun? <button onclick="klikds()" id="syarat" type ="button" class="syarat mb-2 text-blue-600 hover:underline hover">Daftar Sekarang</button>
               </div>
              
-            <button id="uwah" type="button" onclick="active()" class="hover:bg-green-500 bg-red-500 rounded-2xl p-1 mb-3 w-full text-white transition">Selesaikan captcha</button>
+            <button id="uwah" type="button" onclick="active()" class="hover:bg-green-500 bg-red-500 p-2 mb-3 w-full text-white transition rounded-md">Selesaikan captcha</button>
               
-              <button id ="mengsukses" type="submit" class=" w-full bg-blue-500 text-white p-1 rounded-2xl hover:bg-yellow-700 transition ">Reset Password</button>   
+              <button id ="mengsukses" type="submit" class=" w-full bg-blue-500 text-white p-2 rounded-md hover:bg-yellow-700 transition mb-3">Reset Password</button>   
             </form>
+            <button id ="balik" onclick="
+          document.getElementById('email').value=''
+          window.location.href='login.html'"class=" w-full bg-green-500 text-white rounded-md hover:bg-yellow-700 transition p-2 ">Kembali ke Login</button>
+          </div>
           </div>
         </div>
     </div>

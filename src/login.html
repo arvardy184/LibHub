@@ -130,8 +130,12 @@
                 <button id="uwah" type="button" onclick="active()" class="hover:bg-green-500 bg-red-500 rounded-xl pl-2 pr-2 mb-3 text-white transition">Selesaikan captcha</button>
               </div>
               
-              <button id ="mengsukses" type="submit" class=" w-full bg-blue-500 text-white p-2 rounded-md hover:bg-yellow-700 transition">Login</button>   
+              <button id ="mengsukses" type="submit" class=" w-full bg-blue-500 text-white p-2 rounded-md hover:bg-yellow-700 transition mb-2">Login</button>   
             </form>
+            <button id ="balik" onclick="
+          document.getElementById('username').value=''
+          document.getElementById('password').value=''
+          window.location.href='index.html'"class=" w-full bg-green-500 text-white p-2 rounded-md hover:bg-yellow-700 transition">Kembali ke Menu Utama</button>
           </div>
           
         </div>

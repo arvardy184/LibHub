@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../dist/output.css"/>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
@@ -127,25 +128,31 @@
                 </div>
                 
                 <div id="profil" class="flex">
-                  
-                  <div  class="dropdown dropdown-end">
-                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                      <div class="w-10 rounded-full">
-                        <img src="../public/assets/pp.gif" />
-                      </div>
-                    </label>
-                    <ul id="drop" tabindex="0" class="mt-1  z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-36">
-                      <li>
-                        <a href="./profile.html" class="justify-between">
-                          Profile
-                        </a>
-                      </li>
-                      <li onclick="window.location.href='faq.html'"><a>FAQ</a></li>
-                      <li><a href="./riwayat.html">Riwayat</a></li>
-                      <li><a onclick="logout()">Logout</a></li>
-                    </ul>
+                    <div>
+                      <button onclick="window.location.href='cart.html'" class="scales btn transition-all btn-circle w-full">
+                        <i class="fa fa-shopping-cart text-3xl"></i>
+                        <i id="icon" class="animate-pulse mb-6 text-red-500 bg-opacity-40 p-1 rounded-full font-Jakarta font-bold">0</i>
+                      </button>
+                    </div>
+                    
+                    <div  class="dropdown dropdown-end">
+                      <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                          <img src="../public/assets/pp.gif" />
+                        </div>
+                      </label>
+                      <ul id="drop" tabindex="0" class="mt-1  z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-36">
+                        <li>
+                          <a href="./profile.html" class="justify-between">
+                            Profile
+                          </a>
+                        </li>
+                        <li onclick="window.location.href='faq.html'"><a>FAQ</a></li>
+                        <li><a href="./riwayat.html">Riwayat</a></li>
+                        <li><a onclick="logout()">Logout</a></li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
                 
                 
               </div>

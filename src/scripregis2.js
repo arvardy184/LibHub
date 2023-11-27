@@ -1,14 +1,14 @@
 
-var a = document.getElementById("gerakmang")
-    const form = document.getElementById('register-form');
-    const berhasil=document.getElementById('berhasil')
+var ab= document.getElementById("gerakmang2")
+    const form2 = document.getElementById('register-form2');
+    const berhasilah=document.getElementById('berhasilah')
     var nik = document.getElementById('nik');
     var nohp = document.getElementById('nohp');
-    const ok = document.getElementById('ok')
-    form.addEventListener('submit', function (e) {
+    const okf = document.getElementById('okf')
+    form2.addEventListener('submit', function (e) {
       e.preventDefault();
       
-      const data = new FormData(form);
+      const data = new FormData(form2);
       fetch('/register', {
         method: 'POST',
         body: data,
@@ -31,8 +31,8 @@ var a = document.getElementById("gerakmang")
           alert("Nomor hp minimal 10 digit")
         }
         else{
-          animasikan();
-          berhasil.classList.remove('hidden')
+          animasikan2();
+          berhasilah.classList.remove('hidden')
 
         }
         
@@ -43,45 +43,32 @@ var a = document.getElementById("gerakmang")
         
      
     });
-    ok.addEventListener('click',function(){
-      ilangdonk();
-    });
-    history.replaceState(null, null, window.location.href);
-    history.pushState(null, null, location.href);
-    window.onpopstate = function () {
-      
-      history.go(1);
-    };   
-    document.addEventListener("DOMContentLoaded", function() {
-      var tokenFromURL = getParameterByName('token'); // Fungsi untuk mendapatkan parameter dari URL
-      var storedToken = sessionStorage.getItem('pageBToken');
-  
-      if (tokenFromURL !== storedToken) {
-          // Token tidak sesuai, arahkan ke halaman lain
-          window.location.href = "halamanC.html";
+    okf.addEventListener('click',function(){
+      ilangdonk2();
+    }); 
+    
+
+    function animasikan2(){
+      if(ab.classList.contains('kokjauh')){
+        ab.removeEventListener('animationend',dump2)
+        ab.classList.remove('kokjauh')
       }
-  });
-    function animasikan(){
-      if(a.classList.contains('kokjauh')){
-        a.removeEventListener('animationend',dump)
-        a.classList.remove('kokjauh')
-      }
-      a.classList.add('animated-element');
+      ab.classList.add('animated-element');
       
     }
-    function setelahIlangdonkSelesai() {
-      berhasil.classList.add('hidden');
+    function setelahIlangdonkSelesai2() {
+      berhasilah.classList.add('hidden');
       window.location.reload(true);
-      window.location.href='login.html';
+      window.location.href='index.html';
     }
-    function ilangdonk(){
-      a.classList.remove('animated-element');
-      a.classList.add('kokjauh')
-      if(a.classList.contains('kokjauh')&&!a.classList.contains('animated-element'))
-      a.addEventListener('animationend', dump);
+    function ilangdonk2(){
+      ab.classList.remove('animated-element');
+      ab.classList.add('kokjauh')
+      if(ab.classList.contains('kokjauh')&&!ab.classList.contains('animated-element'))
+      ab.addEventListener('animationend', dump2);
     }
-    function dump(){
-      a.style.visibility = 'visible';
-      a.style.display = 'block';
-      setelahIlangdonkSelesai();
+    function dump2(){
+      ab.style.visibility = 'visible';
+      ab.style.display = 'block';
+      setelahIlangdonkSelesai2();
     }

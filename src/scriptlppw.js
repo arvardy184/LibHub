@@ -1,3 +1,5 @@
+document.getElementById('email').value=""
+
 const pwbaru = document.getElementById('pwbaru')
 const cekpwbaru = document.getElementById('pwbarukonfirm')
 const emailterkirim = document.getElementById('emailkirim')
@@ -160,7 +162,7 @@ formb.addEventListener('submit', function (e) {
     });
     if(pwbaru.value==cekpwbaru.value){
         alert("PW Terganti")
-        window.location.reload(true);
+        window.location.href='login.html';
     }
     else{
         alert("Password Ga Sama")
@@ -218,7 +220,7 @@ function klikds(){
         putar.classList.add('animate-spin')
     }, 200);
     setTimeout(function()  {
-        window.location.reload(true);
+        document.getElementById('email').value=""
         window.location.href='register.html';
     }, 1000);
 }

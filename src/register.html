@@ -199,8 +199,14 @@
               Sudah punya akun?
               <button onclick="kliksa()" id="sudahak" type ="button" class="syarat mb-2 text-blue-500 hover:underline hover">Coba Login</button>
             </div>
-            <button id ="mengsukses" onclick="animasikan()" type="submit" class=" w-full bg-blue-500 text-white p-2 rounded-md hover:bg-yellow-700 transition">Continue</button>    
+            <button id ="mengsukses" onclick="animasikan()" type="submit" class=" w-full bg-blue-500 text-white p-2 rounded-md hover:bg-yellow-700 transition mb-2">Lanjutkan</button>
+                
           </form>
+          <button id ="balik" onclick="
+          document.getElementById('email').value=''
+          document.getElementById('password').value=''
+          document.getElementById('name').value=''
+          window.location.href='index.html'"class=" w-full bg-green-500 text-white p-2 rounded-md hover:bg-yellow-700 transition">Kembali ke Menu Utama</button>
         </div>
       </div>
     </div>
@@ -261,9 +267,52 @@
         <div class="p-4 flex">
           <button id="ok" type="click" class=" items-center w-full mx-auto my-auto bg-blue-500 text-white p-2 rounded-3xl hover:bg-green-700 transition">Ok Bang</button>
         </div>
+      </div>
+    </div>
+    <div id="regis2" class="overflow-auto flex bg-cover bg-opacity-50 h-full w-full ml-0 mr-0 mb-0 mt-0 bg-fixed fixed z-40 bg-black hidden">
+      <div class="container mx-auto p-2 my-auto">
+        <div id="pp" class="bg-gray-700 outline-purple-800 p-10 mx-auto rounded-3xl bg-opacity-80 max-w-sm">
+          <h1 class="font-semibold mb-4 text-white">Lanjut Isi Data Diri</h1>
+          <form id="register-form2">
+            <div class="mb-4">
+              <label for="name" class="block font-medium text-white">Nama Lengkap</label>
+              <input type="text" id="name" name="name" class="mt-1 p-2 w-full border rounded-md" required>
+            </div>
+            <div class="mb-4">
+              <label for="tl" class="block font-medium text-white">Tanggal Lahir</label>
+              <input type="date" id="tl" name="tl" class="mt-1 p-2 w-full border rounded-md" required>
+            </div>
+            <div class="mb-4">
+              <label for="nik" class="block font-medium  text-white">NIK</label>
+              <input type="text" id="nik" name="nik" class="mt-1 p-2 w-full border rounded-md" required>
+            </div>
+            <div class="mb-4">
+                <label for="nohp" class="block font-medium  text-white">Nomor Hp</label>
+                <input type="text" id="nohp" name="nohp" class="mt-1 p-2 w-full border rounded-md" required>
+              </div>
+            <button id ="mengsukses"  type="submit" class=" w-full bg-blue-500 text-white p-2 rounded-md hover:bg-yellow-700 transition">Register</button>    
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="berhasilah" class="overflow-auto flex modal blur-sm p-2 h-screen w-screen fixed left-0 top-0 ml-0 mr-0 mb-0 mt-0 bg-fixed bg-black bg-opacity-50 z-50 hidden">
+      <div id="gerakmang2" class=" bg-white w-1/2 rounded-3xl shadow-lg my-auto mx-auto max-w-xs selection:fixed kokjauh">
+        <div class="border-b-2 spacing-1 px-4 py-2">
+          <h3 class="text-black text-center">Yes, Berhasil Daftar Lho!</h3>
+        </div>
+        <div class="text-center p-4">
+          <p>Silahkan cek alamat email mu untuk verifikasi</p>
+        </div>
+        <div class="p-4 flex">
+          <button id="okf" type="click" class=" items-center w-full mx-auto my-auto bg-blue-500 text-white p-2 rounded-3xl hover:bg-green-700 transition">Ok Bang</button>
+        </div>
+    </div>
        
   </body> 
   <script src="./scriptregister.js">
+    
+  </script>
+  <script src="./scriptregis2.js">
     
   </script>
   <script></script>
